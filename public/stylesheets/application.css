@@ -1,0 +1,89 @@
+/*
+Syntax error: Invalid CSS after "*": expected selector, was "/"
+        on line 13 of /Users/Pipinha/Desktop/programs/unifloor/unifloor-2012/app/assets/stylesheets/application.sass
+
+8:  * You're free to add application-wide styles to this file and they'll appear at the top of the
+9:  * compiled file, but it's generally better to create a new file per style scope.
+10:  *
+11:  *= require_self
+12:  *= require_tree .
+13: */
+14: h1
+15:  text-color: green
+16: 
+17: p
+18:  text-color: blue
+
+Backtrace:
+/Users/Pipinha/Desktop/programs/unifloor/unifloor-2012/app/assets/stylesheets/application.sass:13
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/scss/parser.rb:928:in `expected'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/scss/parser.rb:874:in `expected'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/scss/static_parser.rb:19:in `parse_selector'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/perform.rb:232:in `visit_rule'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/perform.rb:27:in `block in visit_children'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/perform.rb:18:in `visit'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/tree/root_node.rb:20:in `render'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/engine.rb:299:in `_render'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/engine.rb:247:in `block in render'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/util.rb:310:in `silence_sass_warnings'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/engine.rb:247:in `render'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/plugin/compiler.rb:339:in `update_stylesheet'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/plugin/compiler.rb:202:in `block in update_stylesheets'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/plugin/compiler.rb:200:in `each'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/plugin/compiler.rb:200:in `update_stylesheets'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/sass-3.1.14/lib/sass/plugin/rack.rb:51:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/activerecord-3.2.1/lib/active_record/query_cache.rb:64:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/activerecord-3.2.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:443:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `_run__3585748724506903824__call__3787348097759778587__callbacks'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/activesupport-3.2.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/railties-3.2.1/lib/rails/rack/logger.rb:26:in `call_app'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/railties-3.2.1/lib/rails/rack/logger.rb:16:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/activesupport-3.2.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/actionpack-3.2.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/railties-3.2.1/lib/rails/engine.rb:479:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/railties-3.2.1/lib/rails/application.rb:220:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/railties-3.2.1/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/Pipinha/.rvm/gems/ruby-1.9.2-p290@unifloor-2012/gems/rack-1.4.1/lib/rack/handler/webrick.rb:59:in `service'
+/Users/Pipinha/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/Pipinha/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/Pipinha/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"*\": expected selector, was \"/\"\A         on line 13 of /Users/Pipinha/Desktop/programs/unifloor/unifloor-2012/app/assets/stylesheets/application.sass\A \A 8:  * You're free to add application-wide styles to this file and they'll appear at the top of the\A 9:  * compiled file, but it's generally better to create a new file per style scope.\A 10:  *\A 11:  *= require_self\A 12:  *= require_tree .\A 13: */\A 14: h1\A 15:  text-color: green\A 16: \A 17: p\A 18:  text-color: blue"; }

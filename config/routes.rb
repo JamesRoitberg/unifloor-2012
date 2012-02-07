@@ -1,10 +1,7 @@
 Unifloor::Application.routes.draw do
-  match "/products" => "pages#products"
-
-  match "/accessories" => "pages#accessories"
-
-  match "/contact" => "pages#contact"
-
+  match "/produtos" => "pages#products"
+  match "/accessorios" => "pages#accessories"
+  match "/contato" => "pages#contact"
   match "/unifloor" => "pages#unifloor"
   
   root :to => 'pages#home'
