@@ -1,4 +1,14 @@
 Unifloor::Application.routes.draw do
+  match "/products" => "pages#products"
+
+  match "/accessories" => "pages#accessories"
+
+  match "/contact" => "pages#contact"
+
+  match "/unifloor" => "pages#unifloor"
+  
+  root :to => 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
