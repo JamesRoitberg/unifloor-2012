@@ -1,6 +1,6 @@
 Unifloor::Application.routes.draw do
   match "/produtos" => "pages#products"
-  match "/accessorios" => "pages#accessories"
+  match "/acessorios" => "pages#accessories"
   match "/contato" => "pages#contact"
   match "/unifloor" => "pages#unifloor"
   
