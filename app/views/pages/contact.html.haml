@@ -1,2 +1,19 @@
-%h1 Pages#contact
-%p Find me in app/views/pages/contact.html.haml
+%section
+  %p A UniFloor quer te ouvir. Entre em contato conosco pelo telefone, e-mail ou preencha os campos abaixo e entraremos em contato o mais rápido possível. 
+%figure
+  =image_tag "contato-img.png", :alt=>"Contato"
+%form{:name=>"contact_form", :method=>"post", :action=>"#"}
+  %p
+    %label{:for=>"name"}Nome:
+    %input{:type=>"text", :id=>"name", :name=>"name", :required=>"true"} 
+  %p
+    %label{:for=>"mail"}E-Mail:
+    %input{:type=>"email", :id=>"mail", :name=>"mail", :required=>"true"}
+  %p
+    %label{:for=>"subj"}Assunto:
+    %input{:type=>"text", :id=>"subj", :name=>"subj", :required=>"true"} 
+  %p
+    %label{:for=>"mess"}Mensagem:
+    %textarea{:id=>"mess", :name=>"mess", :required=>"true"}
+  %input{:type=>"submit", :value=>"Enviar" }
+

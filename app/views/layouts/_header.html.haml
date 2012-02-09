@@ -1,17 +1,11 @@
 .logo
-  %h1 Unifloor 
+  %h1 #{link_to "Unifloor", root_path}
   %hr
 %nav
-  %ul
-    %li
-      %a Home
-    %li
-      %a Unifloor
-    %li
-      %a Produtos
-    %li
-      %a Acessórios
-    %li
-      %a Contato
+  #{link_to "Home", root_path, :title =>"Home"}
+  #{link_to "Unifloor", "/unifloor", :title =>"Unifloor" }
+  #{link_to "Products", "/produtos", :title =>"Produtos" }
+  #{link_to "Acessórios", "/acessorios", :title =>"Acessórios" }
+  #{link_to "Contato", "/contato", :title =>"Contato" }
 %hr
 
