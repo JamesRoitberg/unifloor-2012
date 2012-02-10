@@ -1,36 +1,39 @@
-%section
+%section.home
   %figure
     %ul#slide_index
       %li 
-        %a{:href =>"javacript://", :title =>"1"} 1
+        %a{:href => "javacript://", :title => "1"} 1
       %li 
-        %a{:href =>"javacript://", :title =>"2"} 2
+        %a{:href => "javacript://", :title => "2"} 2
       %li 
-        %a{:href =>"javacript://", :title =>"3"} 3
+        %a{:href => "javacript://", :title => "3"} 3
     %ul.slide_container
       %li
-        =image_tag "home/slide_1.png", :alt =>"Imagem 1"
+        =image_tag "home/slide_1.png", :alt => "Imagem 1"
       %li
-        =image_tag "home/slide_2.png", :alt =>"Imagem 2"
+        =image_tag "home/slide_2.png", :alt => "Imagem 2"
       %li
-        =image_tag "home/slide_3.png", :alt =>"Imagem 3"
-  %article   
+        =image_tag "home/slide_3.png", :alt => "Imagem 3"
+  %article.welcome   
     %header
       %h2 Bem Vindo a UniFloor!
     %p A Unifloor quer trazer a melhor qualidade dos pisos laminados para tornar o seu ambiente agradável e confortável. Utilizamos o sistema Click, dispensando o uso de colas e facilitando a instalação em areas residenciais e comerciais de baixo e medio trafego. 
   %section
     %aside
+      %h3
+        #{link_to "Produtos", "/produtos", :title => "Produtos", :class => "title"}
       %ul
         %li
-          %a{:href =>"javascritp://", :tite=>"Top Plus"} Top Plus
+          %a{:href => "javascritp://", :tite => "Top Plus"} Top Plus
         %li
-          %a{:href =>"javascritp://", :tite=>"Elegance"} Elegance(Em breve)
+          %a{:href => "javascritp://", :tite => "Elegance"} Elegance <br/>(Em breve)
         %li
-          %a{:href =>"javascritp://", :tite=>"Top Plus"} Rustic(Em breve)
+          %a{:href => "javascritp://", :tite => "Top Plus"} Rustic <br/>(Em breve)
+            
     %article
       %p  Muita dedicação, altos investimentos e grande preocupação em aprimorar os seus serviços fizeram com que a Global, fundada em 1993, se tornasse em uma das principais empresas de exportação no setor de piso de madeira maciça e DECK do Brasil. Tendo como foco a inovação, eficácia e honestidade, a empresa conquistou, tanto nacional quanto internacionalmente, a confiança de seus clientes.
       %p Inicialmente, a Global atuava somente no mercado brasileiro e chinês com a sede em São Paulo. Graças a credibilidade conquistada no decorrer dos anos, a empresa pôde expandir o seu mercado para os Estados Unidos, África do Sul e alguns países da Europa. Para melhor administração, a empresa abriu novos escritórios em Hong Kong...#{link_to "(saiba mais)", "/unifloor"}
     %figure
-      #{link_to "Contato", "/contato", :title=>"Contato"}
+      #{link_to "Contato", "/contato", :title => "Contato"}
       
 
