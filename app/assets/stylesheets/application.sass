@@ -11,10 +11,6 @@ input,textarea
 input,textarea
   padding: 0
   
-a
-  text-decoration: none
-  color: #000
-
 //variables
 $main_color: #009C57
 $main_color2: #7A6B68
@@ -27,6 +23,27 @@ $border_default: 1px solid $main_color
   &:hover
     text-decoration: underline
 
+a
+  text-decoration: none
+  color: $main_color2
+
+=aside_menu
+  width: 95px
+  float: left
+  border-right: $border_default
+  margin-left: 50px
+  h3
+    margin-bottom: 15px
+  ul
+    li 
+      a
+        margin-bottom: 15px    
+        display: block
+        &:hover
+          background: url('link-p-hover.png') no-repeat
+          color: $main_color
+          padding-left: 15px
+
 //body
 body
   color: $main_color2
@@ -37,12 +54,77 @@ body
     overflow: hidden
     h1, h2, h3, h4
       color: $main_color
+    h2
+      font-size: 24px
+    h3 
+      font-size: 16px
+      font-weight: bold
+    h4
+      font-size: 16px
     p
       margin-bottom: 15px
+    hr
+      color: $main_color
+      border: none
+      height: 1px
+      background: $main_color
+
+
+
+//header
+.logo
+  width: 230px
+  height: 120px
+  float: left
+  h1
+    text-indent: -99999px
+  a
+    background: url('logo.png') no-repeat
+    width: 230px
+    height: 94px
+    display: block
+hr.right
+  width: 230px
+  float: right
+  margin-top: 118px
+nav.header
+  width: 500px
+  margin: 108px 0 30px 0
+  float: left
+  a
+    color: $main_color
+    font-size: 16px
+    font-weight: bold
+    display: block
+    float: left
+    margin-left: 30px
+    line-height: 19px
+    &:hover
+      text-decoration: underline
+
+//footer
+section.footer
+  width: 100%
+  float: left
+  color: $main_color
+  margin-top: 15px
+  address
+    float: left
+    width: 260px
+    margin-left: 105px
+  p 
+    margin-bottom: 2px 
+  a
+    color: $main_color
+    float: right
+    width: 248px
+    text-align: center
+
 
 //home
 section.home
   float: left
+  border-bottom: $border_default
   figure
     width: 688px
     height: 310px
@@ -79,7 +161,6 @@ section.home
       width: 688px
       margin: 32px 0 16px 137px
       h2
-        font-size: 24px
         text-align: center
     p
       width: 688px
@@ -89,6 +170,7 @@ section.home
   section
     margin-top: 15px
     width: 100%
+    height: 205px
     float: left
     overflow: hidden
     aside
@@ -104,7 +186,10 @@ section.home
           margin-bottom: 15px
           display: block
           a
-            color: $main_color2
+            &:hover
+              background: url('link-p-hover.png') no-repeat
+              color: $main_color
+              padding-left: 15px
     article
       width: 490px
       float: left
@@ -120,10 +205,95 @@ section.home
       a
         +atitle
         margin-left: 50px
-        background: url(contact.png)
+        background: url(contact.png) no-repeat -8px 30px
         width: 100px
-        height: 114px
+        height: 146px
         display: block
+
+//unifloor
+section.unifloor
+  border-bottom: $border_default
+  float: left
+  width: 100%
+  article
+    width: 375px
+    float: left
+    margin: 0 100px 30px 95px
+    p
+      text-indent: 30px
+
+//produtos
+section.products
+  margin-top: 50px
+  @extend .unifloor
+  aside
+    +aside_menu
+  section#top_plus
+    width: 615px
+    float: left
+    margin-left: 120px
+    header
+      margin-bottom: 30px
+    figure
+      width: 610px
+      height: 110px
+      float: left
+      overflow: hidden
+      ul.slide_products
+        width: 610px * 5
+        height: 110px
+        float: left
+        li
+          @extend figure
+          display: block
+          img
+          @extend li
+    article
+      width: 255px
+      float: left
+      margin: 15px 0 0 15px
+      p.last
+        margin: -15px 0 0 62px
+    aside.colors
+      border: none
+      width: 130px
+      float: right
+      margin-bottom: 50px
+      header
+        margin-top: 15px
+      ul
+        margin-left: 15px
+        a
+          padding-left: 15px
+          &:hover
+            background: url('link-p-hover.png') no-repeat
+            color: $main_color
+
+//acessórios
+section.accessories
+  @extend .unifloor
+  article
+    width: 750px
+  aside
+    +aside_menu
+  section#redutor
+    width: 610px
+    float: left
+    margin: 0 0 50px 120px
+    h2
+      margin-bottom: 30px
+  section#trasicao, section#rodape
+    @extend #redutor
+    display: none
+
+//contato
+
+
+
+
+
+
+      
 
        
 
