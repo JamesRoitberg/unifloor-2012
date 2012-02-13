@@ -1,19 +1,24 @@
-%section
-  %p A UniFloor quer te ouvir. Entre em contato conosco pelo telefone, e-mail ou preencha os campos abaixo e entraremos em contato o mais rápido possível. 
-%figure
-  =image_tag "contato-img.png", :alt=>"Contato"
-%form{:name=>"contact_form", :method=>"post", :action=>"#"}
-  %p
-    %label{:for=>"name"}Nome:
-    %input{:type=>"text", :id=>"name", :name=>"name", :required=>"true"} 
-  %p
-    %label{:for=>"mail"}E-Mail:
-    %input{:type=>"email", :id=>"mail", :name=>"mail", :required=>"true"}
-  %p
-    %label{:for=>"subj"}Assunto:
-    %input{:type=>"text", :id=>"subj", :name=>"subj", :required=>"true"} 
-  %p
-    %label{:for=>"mess"}Mensagem:
-    %textarea{:id=>"mess", :name=>"mess", :required=>"true"}
-  %input{:type=>"submit", :value=>"Enviar" }
+%section.contact
+  %article
+    %p A UniFloor quer te ouvir. Entre em contato conosco pelo telefone, e-mail ou preencha os campos abaixo e entraremos em contato o mais rápido possível. 
+  %figure
+    =image_tag "contato-img.png", :alt=>"Contato"
+  %form{:name=>"contact_form", :method=>"post", :action=>"#"}
+    %span
+      %label{:for=>"name"}Nome:
+    %p
+      %input{:type=>"text", :id=>"name", :name=>"name", :required=>"true"} 
+    %span
+      %label{:for=>"mail"}E-Mail:
+    %p
+      %input{:type=>"email", :id=>"mail", :name=>"mail", :required=>"true"}
+    %span
+      %label{:for=>"subj"}Assunto:
+    %p
+      %input{:type=>"text", :id=>"subj", :name=>"subj", :required=>"true"} 
+    %span
+      %label{:for=>"mess"}Mensagem:
+    %p
+      %textarea{:id=>"mess", :name=>"mess", :required=>"true"}
+    %input{:type=>"submit", :value=>"Enviar" }
 
