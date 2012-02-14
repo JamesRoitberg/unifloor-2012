@@ -48,6 +48,11 @@ a
           background: url('link-p-hover.png') no-repeat
           color: $main_color
           padding-left: 15px
+    li.active
+      a
+        background: url('link-p-hover.png') no-repeat
+        color: $main_color
+        padding-left: 15px
 
 //body
 body
@@ -146,11 +151,17 @@ section.home
       li
         display: inline
         a 
+          color: #000
           display: block
           float: left
           font-size: 16px
           margin: 0 0 2px 7px
           padding: 3px 5px
+      li.active
+        a
+          background: $main_color
+          +border-radius( 5px )
+          color: #FFF
     ul.slide_container
       width: 100%
       li
@@ -158,6 +169,10 @@ section.home
         left: 0
         top: 0
         z-index: -1
+        img
+          min-width: 688px
+          max-width: 688px
+          max-height: 310px
   article.welcome
     float: left
     width: 100%
@@ -271,9 +286,14 @@ section.products
         margin-top: 15px
       ul
         margin-left: 15px
-        a
-          padding-left: 15px
-          &:hover
+        li
+          a
+            padding-left: 15px
+            &:hover
+              background: url('link-p-hover.png') no-repeat
+              color: $main_color
+        li.active
+          a
             background: url('link-p-hover.png') no-repeat
             color: $main_color
 
