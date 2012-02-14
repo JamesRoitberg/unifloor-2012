@@ -4,13 +4,7 @@
 
 =reset-focus
   outline-color: #009C57
-input,textarea
-  &:focus
-    border: 1px solid #009C57
-    +border-radius( 4px )
-input,textarea
-  padding: 0
-  
+
 //variables
 $main_color: #009C57
 $main_color2: #7A6B68
@@ -22,6 +16,17 @@ $border_default: 1px solid $main_color
   text-transform: uppercase
   &:hover
     text-decoration: underline
+
+input,textarea
+  +border-radius( 5px )
+  height: 32px
+  resize: none
+  width: 390px
+  border: 1px solid $main_color2
+  background: none
+  &:focus
+    border: 1px solid #009C57
+    +border-radius( 5px )
 
 a
   text-decoration: none
@@ -198,6 +203,7 @@ section.home
       border-right: $border_default
       padding: 0 15px
       p
+        text-indent: 15px
         a
           color: $main_color
     figure
@@ -291,6 +297,7 @@ section.accessories
 //contato
 section.contact
   @extend .unifloor
+  margin-top: 50px
   article
     width: 790px
     float: left
@@ -300,9 +307,28 @@ section.contact
     float: left
     margin-left: 96px
   form
-    p
-      width: 392px
+    width: 455px
+    float: left
+    margin: 0 0 100px 20px
+    span
+      width: 435px
       float: left
+      color: $main_color
+    p
+      width: 435px
+      float: left
+      textarea
+        height: 160px
+    input
+      &[type=submit]
+        width: 81px
+        float: right
+        margin-right: 62px
+        color: $main_color
+        border: $border_default
+        cursor: pointer
+
+
 
 
 
