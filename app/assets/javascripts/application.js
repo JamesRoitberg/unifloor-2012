@@ -56,8 +56,12 @@ $( document ).ready( function(){
 			$( 'ul.slide_products').animate({ 'margin-left' : '-1220px'}, 1000);
 		}else if( index == [3]){
 			$( 'ul.slide_products').animate({ 'margin-left' : '-1830px'}, 1000);
-		}else if( index == [6]){
+		}else if( index == [5]){
 			$( 'ul.slide_products').animate({ 'margin-left' : '-2440px'}, 1000);
+		}else if( index == [6]){
+			$( 'ul.slide_products').animate({ 'margin-left' : '-3050px'}, 1000);
+		}else if( index == [7]){
+			$( 'ul.slide_products').animate({ 'margin-left' : '-3660px'}, 1000);	
 		}
 	});	
 	//Product Slideshow End
