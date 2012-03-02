@@ -42,6 +42,22 @@ $( document ).ready( function(){
 
 //Product Slideshow
 
+	$( 'ul.p_menu li' ).click( function(e){
+		e.preventDefault();
+		$( 'ul.p_menu li' ).removeClass( 'active' );
+		$( this ).addClass( 'active' );
+		var pMenuIndex = $( this ).index();
+		if( pMenuIndex == 0 ){
+			$( '.products #parquet' ).fadeOut( function(){
+				$( '.products #top_plus' ).fadeIn();
+			});
+		}else if( pMenuIndex == 1 ){
+			$( '.products #top_plus' ).fadeOut( function(){
+				$( '.products #parquet' ).fadeIn();
+			});
+		}
+	})
+
 
 	$( '.colors ul li').click( function(e){
 		e.preventDefault();

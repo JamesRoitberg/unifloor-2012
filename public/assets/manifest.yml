@@ -15,9 +15,13 @@ products/carvalho.png: products/carvalho-81efd2b9dbf0a8d01b1128bc5b58481a.png
 products/carvalho_claro.png: products/carvalho_claro-5d72ac3f6de6d391e0ba63a43911c3c8.png
 products/carvalho_imperial.png: products/carvalho_imperial-1070ebe336742e4b1b14843deaea3138.png
 products/carvalho_wood.png: products/carvalho_wood-1d8f942dee05fb2253aea73ff45cc99f.png
+products/cumaru-parquet.png: products/cumaru-parquet-d7436d8b9059cbdf32d872467aaee6a3.png
 products/faya.png: products/faya-cfef3c532609f3812261f2deda177cba.png
+products/ipe-parquet.png: products/ipe-parquet-da8efdc39dac2368b57aa2760d087a64.png
+products/parquet-imperial.png: products/parquet-imperial-f7ccf5c98c9666fec574f116b879efa1.png
 products/patina_branco.png: products/patina_branco-1c1acbb886882f772dcc45f8392b91a7.png
+products/pinho-parquet.png: products/pinho-parquet-1366bf6c04c52103943fd930d4a596d6.png
 products/tauari.png: products/tauari-68b0ca8422d86fde3cb9d2cdc8369a9b.png
 unifloor.png: unifloor-e66b4740b32b87a62ae7a20f4de61db3.png
-application.js: application-1d8b834cb26dbee4c82a1ccd900b499e.js
-application.css: application-586d59bc8bf608e893587edc8f3b98db.css
+application.js: application-0d6833cbba395bdc684943d6b6d9403f.js
+application.css: application-375fec4559899a6661a93613a6fef4c3.css
