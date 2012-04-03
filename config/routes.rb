@@ -1,4 +1,6 @@
 Unifloor::Application.routes.draw do
+  resources :messages
+
   match "/produtos" => "pages#products"
   match "/acessorios" => "pages#accessories"
   match "/contato" => "pages#contact"

@@ -3,22 +3,23 @@
     %p A UniFloor quer te ouvir. Entre em contato conosco pelo telefone, e-mail ou preencha os campos abaixo e entraremos em contato o mais rápido possível. 
   %figure
     =image_tag "contato-img.png", :alt=>"Contato"
-  %form{:name=>"contact_form", :method=>"post", :action=>"#"}
+  =form_for(Message.new) do |f|
     %span
-      %label{:for=>"name"}Nome:
+      = f.label :name, "Nome:"
     %p
-      %input{:type=>"text", :id=>"name", :name=>"name", :required=>"true"} 
+      = f.text_field :name
     %span
-      %label{:for=>"mail"}E-Mail:
+      = f.label :mail, "E-Mail:"
     %p
-      %input{:type=>"email", :id=>"mail", :name=>"mail", :required=>"true"}
+      = f.text_field :mail
     %span
-      %label{:for=>"subj"}Assunto:
+      = f.label :subj, "Assunto:"
     %p
-      %input{:type=>"text", :id=>"subj", :name=>"subj", :required=>"true"} 
+      = f.text_field :subj
     %span
-      %label{:for=>"mess"}Mensagem:
+      = f.label :message, "Menssagem:"
     %p
-      %textarea{:id=>"mess", :name=>"mess", :required=>"true"}
-    %input{:type=>"submit", :value=>"Enviar" }
+      = f.text_area :message
+    = f.submit( "Enviar", :disable_with =>"Enviando..." )
+
 
