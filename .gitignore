@@ -16,4 +16,6 @@ Ignore all logfiles and tempfiles.
 config/database.yml
 Gemfile
 Gemfile.lock
+.DS_Store
+.rvmrc
 
