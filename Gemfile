@@ -8,7 +8,7 @@ gem 'haml'
 gem 'haml-rails'
 gem 'sqlite3'
 gem 'devise'
-
+gem 'enumerate_it'
 
 
 group :assets do
