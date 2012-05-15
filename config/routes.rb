@@ -3,6 +3,9 @@ Unifloor::Application.routes.draw do
 
   resources :messages
 
+  namespace :users do
+    root :to => 'dashboards#index'
+  end
   match "/produtos" => "pages#products"
   match "/acessorios" => "pages#accessories"
   match "/contato" => "pages#contact"
