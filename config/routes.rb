@@ -1,4 +1,6 @@
 Unifloor::Application.routes.draw do
+  devise_for :users
+
   resources :messages
 
   match "/produtos" => "pages#products"
