@@ -3,7 +3,10 @@ Unifloor::Application.routes.draw do
 
   resources :messages
 
+  resources :associates
   namespace :users do
+    resources :employees
+    resources :representatives
     root :to => 'dashboards#index'
   end
   match "/produtos" => "pages#products"

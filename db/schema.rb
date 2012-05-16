@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120515183818) do
+ActiveRecord::Schema.define(:version => 20120516123220) do
 
   create_table "messages", :force => true do |t|
     t.string   "name",       :limit => 80
@@ -20,6 +20,21 @@ ActiveRecord::Schema.define(:version => 20120515183818) do
     t.string   "message"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
+  end
+
+  create_table "representatives", :force => true do |t|
+    t.string   "cpf"
+    t.string   "rg"
+    t.string   "address"
+    t.string   "cep"
+    t.string   "city"
+    t.string   "uf"
+    t.string   "phone"
+    t.string   "cellphone"
+    t.string   "neighborhood"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -33,6 +48,7 @@ ActiveRecord::Schema.define(:version => 20120515183818) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name"
     t.string   "access_type"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false

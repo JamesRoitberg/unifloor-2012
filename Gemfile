@@ -9,6 +9,7 @@ gem 'haml-rails'
 gem 'sqlite3'
 gem 'devise'
 gem 'enumerate_it'
+gem 'nested_form', :git => 'https://github.com/ryanb/nested_form.git'
 
 
 group :assets do

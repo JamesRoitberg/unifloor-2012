@@ -1,0 +1,19 @@
+%h1 Associados
+
+%h2 Administradores
+%ul
+  - @admins.each do |admin|
+    %li
+      = admin.email
+
+%h2 Representantes
+- @representatives.each do |representative|
+  %li
+    = representative.email
+= link_to 'Novo Representante', new_users_representative_path
+
+%h2 Funcionarios
+- @employees.each do |provider|
+  %li
+    = provider.email
+= link_to 'Novo Funcionario', new_users_employee_path
