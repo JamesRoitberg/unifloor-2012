@@ -1,0 +1,30 @@
+%section.sign_in
+  .left
+    %h2 Logar
+    %strong Olá
+    %p 
+      Preencha os dados abaixo para entrar no sistema da
+      %strong 
+        Unifloor
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      %ul
+        %li 
+          = f.label :email
+        %li.more_gap 
+          = f.email_field :email
+        %li 
+          = f.label :password       
+        %li.more_gap
+          = f.password_field :password
+        %li 
+        - if devise_mapping.rememberable?
+          = f.check_box :remember_me
+        %li  
+          = f.label :remember_me
+        %li
+          = f.submit "Logar"
+    - if devise_mapping.recoverable? && controller_name != 'passwords'
+      = link_to "Esqueceu sua senha?", new_password_path(resource_name)
+  .right
+    %figure
+      = image_tag("sign-in.jpg")

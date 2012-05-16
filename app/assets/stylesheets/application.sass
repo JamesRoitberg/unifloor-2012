@@ -358,3 +358,47 @@ section.message_ok
   padding-top: 20px
   h2
     margin-bottom: 30px
+
+//sign input
+section.sign_in
+  @extend .unifloor
+  .left
+    float: left
+    width: 500px
+    margin-bottom: 60px
+    h2
+      margin-bottom: 30px
+    strong
+      font:
+        wight: bold
+        size: 16px
+    p
+      margin-top: 10px
+    a
+      color: $main_color
+    form
+      ul
+        li
+          margin-bottom: 5px
+          label
+            color: $main_color
+          input
+            &[type="submit"]
+              width: 81px
+              float: right
+              margin-right: 108px
+              color: $main_color
+              border: $border_default
+              cursor: pointer
+              float: right
+        li.more_gap
+          margin-bottom: 25px
+  .right
+    float: left
+    width: 960px - 500px
+    figure
+      float: right
+      img
+        height: 344px
+
+
