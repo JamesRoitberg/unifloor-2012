@@ -1,20 +1,21 @@
-%h1 Associados
-
-%h2 Administradores
-%ul
-  - @admins.each do |admin|
-    %li
-      = admin.email
-= link_to 'Novo Admin', new_users_admin_path
-
-%h2 Representantes
-- @representatives.each do |representative|
-  %li
-    = representative.email
-= link_to 'Novo Representante', new_users_representative_path
-
-%h2 Funcionarios
-- @employees.each do |provider|
-  %li
-    = provider.email
-= link_to 'Novo Funcionario', new_users_employee_path
+%section.associates
+  %h2 Associados
+  .administrator
+    %strong Administradores
+    %ul
+      - @admins.each do |admin|
+        %li
+          = admin.email
+    = link_to 'Novo Admin', new_users_admin_path
+  .representative
+    %strong Representantes
+    - @representatives.each do |representative|
+      %li
+        = representative.email
+    = link_to 'Novo Representante', new_users_representative_path
+  .emplooye
+    %strong Funcionarios
+    - @employees.each do |provider|
+      %li
+        = provider.email
+    = link_to 'Novo Funcionario', new_users_employee_path
