@@ -80,7 +80,6 @@ body
       background: $main_color
 
 
-
 //header
 .logo
   width: 230px
@@ -376,7 +375,7 @@ section.sign_in
       margin-top: 10px
     a
       color: $main_color
-    form
+    form.default_form
       ul
         li
           margin-bottom: 5px
@@ -400,5 +399,46 @@ section.sign_in
       float: right
       img
         height: 344px
+
+//new representative
+section.representative
+  @extend .unifloor
+  h2
+    margin-bottom: 30px
+  form
+    @extend .default_form
+    width: 100%
+    ul
+      width: 835px
+      overflow: hidden
+      margin: 0 auto
+      li
+        margin-bottom: 25px
+        float: left
+        label
+          color: $main_color
+          display: block
+          overflow: hidden
+        input
+          &[type="submit"]
+            width: 81px
+            float: right
+            margin-right: 108px
+            color: $main_color
+            border: $border_default
+            cursor: pointer
+            float: right
+      li.m_right
+        margin: 0 50px 25px 0
+      li.submit
+        overflow: hidden
+        clear: both
+
+//new employees
+section.employees
+  @extend .representative
+  
+
+     
 
 

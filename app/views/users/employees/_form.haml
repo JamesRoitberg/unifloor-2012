@@ -1,10 +1,21 @@
 = form_for(@employee, url: users_employees_path,  :html => {:multipart => true}) do |f|
-  = f.label "Nome"
-  = f.text_field :name
-  = f.label "email"
-  = f.text_field :email
-  = f.label "senha"
-  = f.password_field :password
-  = f.label "confirmacao de senha"
-  = f.password_field :password_confirmation
-  = f.submit "Cadastrar"
+  %ul
+    %li.m_right
+      = f.label "Nome"
+      = f.text_field :name
+    %li.m_right
+      = f.label "email"
+      = f.text_field :email
+    %li.m_right
+      = f.label "senha"
+      = f.password_field :password
+    %li.m_right
+      = f.label "confirmacao de senha"
+      = f.password_field :password_confirmation
+    %li.submit
+      = f.submit "Cadastrar"
+  
+  
+  
+  
+  
