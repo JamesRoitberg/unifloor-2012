@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120516123220) do
+ActiveRecord::Schema.define(:version => 20120517190719) do
+
+  create_table "customers", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "cep"
+    t.string   "city"
+    t.string   "uf"
+    t.string   "phone"
+    t.string   "neighborhood"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "messages", :force => true do |t|
     t.string   "name",       :limit => 80
@@ -35,6 +47,15 @@ ActiveRecord::Schema.define(:version => 20120516123220) do
     t.integer  "user_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "stocks", :force => true do |t|
+    t.string   "code"
+    t.string   "product"
+    t.string   "status"
+    t.string   "amount"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

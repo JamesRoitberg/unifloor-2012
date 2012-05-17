@@ -5,7 +5,9 @@ Unifloor::Application.routes.draw do
 
   resources :associates
   namespace :users do
+    resources :customers
     resources :employees
+    resources :admins
     resources :representatives
     root :to => 'dashboards#index'
   end

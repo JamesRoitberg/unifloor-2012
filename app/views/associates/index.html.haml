@@ -5,6 +5,7 @@
   - @admins.each do |admin|
     %li
       = admin.email
+= link_to 'Novo Admin', new_users_admin_path
 
 %h2 Representantes
 - @representatives.each do |representative|

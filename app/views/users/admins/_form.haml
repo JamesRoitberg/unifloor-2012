@@ -1,0 +1,10 @@
+= form_for(@admin, url: users_admins_path,  :html => {:multipart => true}) do |f|
+  = f.label "Nome"
+  = f.text_field :name
+  = f.label "email"
+  = f.text_field :email
+  = f.label "senha"
+  = f.password_field :password
+  = f.label "confirmacao de senha"
+  = f.password_field :password_confirmation
+  = f.submit "Cadastrar"

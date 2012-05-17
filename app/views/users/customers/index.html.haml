@@ -1,0 +1,5 @@
+%h1 Clientes
+%br
+- @customers.each do |customer|
+  = customer.name
+= link_to 'Novo Cliente', new_users_customer_path
