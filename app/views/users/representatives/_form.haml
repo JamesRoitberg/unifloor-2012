@@ -1,29 +1,75 @@
-= form_for(@representative, url: users_representatives_path,  :html => {:multipart => true}) do |f|
-  = f.label "Nome"
-  = f.text_field :name
-  = f.label "email"
-  = f.text_field :email
-  = f.label "senha"
-  = f.password_field :password
-  = f.label "confirmacao de senha"
-  = f.password_field :password_confirmation
-  = f.fields_for :representative do |builder| 
-    = f.label "CPF"
-    = builder.text_field :cpf
-    = f.label "RG"
-    = builder.text_field :rg
-    = f.label "Endereco"
-    = builder.text_field :address
-    = f.label "Bairro"
-    = builder.text_field :neighborhood
-    = f.label "CEP"
-    = builder.text_field :cep
-    = f.label "Cidade"
-    = builder.text_field :city
-    = f.label "UF"
-    = builder.text_field :uf
-    = f.label "Telefone"
-    = builder.text_field :phone
-    = f.label "Celular"
-    = builder.text_field :cellphone
-  = f.submit 'Cadastrar'
+= form_for(@representative, url: users_representatives_path,  :html => {:multipart => true, :class=> 'default_form'}) do |f|
+  %ul
+    %li.m_right
+      = f.label "Nome"
+      = f.text_field :name
+    %li
+      = f.label "email"
+      = f.text_field :email
+    %li.m_right
+      = f.label "senha"
+      = f.password_field :password
+    %li
+      = f.label "confirmacao de senha"
+      = f.password_field :password_confirmation
+    = f.fields_for :representative do |builder| 
+      %li.m_right
+        = f.label "CPF"
+        = builder.text_field :cpf
+      %li
+        = f.label "RG"
+        = builder.text_field :rg
+      %li.m_right
+        = f.label "Endereco"
+        = builder.text_field :address
+      %li
+        = f.label "Bairro"
+        = builder.text_field :neighborhood
+      %li.m_right
+        = f.label "CEP"
+        = builder.text_field :cep
+      %li
+        = f.label "Cidade"
+        = builder.text_field :city
+      %li.m_right
+        = f.label "UF"
+        = builder.text_field :uf
+      %li
+        = f.label "Telefone"
+        = builder.text_field :phone
+      %li.m_right
+        = f.label "Celular"
+        = builder.text_field :cellphone
+      %li.submit
+        = f.submit 'Cadastrar'
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
