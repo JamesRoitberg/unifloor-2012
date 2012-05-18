@@ -375,7 +375,7 @@ section.sign_in
       margin-top: 10px
     a
       color: $main_color
-    form.default_form
+    form
       ul
         li
           margin-bottom: 5px
@@ -460,6 +460,25 @@ section.associates
       &:hover
         color: $main_color
         text-decoration: underline
+
+//dashboard
+section.dashboard
+  @extend .unifloor
+  padding-bottom: 50px
+  h2
+    margin-bottom: 30px
+  a
+    color: $main_color
+    font-size: 18px
+    margin: 50px
+    &:hover
+      text-decoration: underline
+
+//customers
+section.customers
+  @extend .dashboard
+
+
 
      
 
