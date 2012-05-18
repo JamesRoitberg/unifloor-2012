@@ -428,7 +428,6 @@ section.representative
             color: $main_color
             border: $border_default
             cursor: pointer
-            float: right
       li.m_right
         margin: 0 50px 25px 0
       li.submit
@@ -503,7 +502,97 @@ section.new_costumers
     input
       &[type="submit"]
       float: left
+
+//categories
+section.categories
+  @extend .unifloor
+  h2
+    margin-bottom: 30px
+  >ul
+    float: left
+    margin: 0 0 50px 30px
+    >li
+      display: block
+      strong
+        color: $main_color
+        font:
+          size: 18px
+      a
+        color: $main_color
+        font-size: 18px
+    li.menu
+      margin: 10px 0 10px 20px
+      ul
+        li
+          display: inline
+          margin-right: 20px
+          span
+            color: lighten($main_color2, 20)
+            font-size: 18px
   
+//categories new
+section.categories_new
+  @extend .unifloor
+  h2
+    margin-bottom: 30px
+  form
+    float: left
+    margin-bottom: 50px
+    .field
+      float: left
+      margin-bottom: 20px
+      label
+        display: block
+        float: left
+        color: $main_color
+        font-size: 16px
+        margin-bottom: 10px
+      input
+        display: block
+    .actions
+      input
+        &[type="submit"]
+        float: left
+        width: 81px
+        color: $main_color
+        border: $border_default
+        cursor: pointer
+  a
+    margin-left: 20px
+    font-size: 16px
+    color: $main_color
+    &:hover
+      text-decoration: underline  
+
+//categories show
+section.categories_show
+  @extend .representative
+  padding-bottom: 30px
+  strong  
+    color: $main_color
+    font-size: 18px
+    float: left
+    margin-right: 10px
+  span
+    font-size: 16px
+  .edit_back
+    float: right
+    a
+      color: $main_color
+      font-size: 16px
+      &:hover
+        text-decoration: underline
+
+//products new
+section.products_new
+  @extend .categories_new
+
+
+
+
+
+
+      
 
 
 

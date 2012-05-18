@@ -12,9 +12,26 @@
     %tr
       %td= users_product.name
       %td= users_product.category
-      %td= link_to 'Edit', edit_users_product_path(users_product)
-      %td= link_to 'Destroy', [:users ,users_product], :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Editar', edit_users_product_path(users_product)
+      %td= link_to 'Deletar', [:users ,users_product], :confirm => 'Você tem certeza?', :method => :delete
 
 %br
 
 = link_to 'New Product', new_users_product_path
+
+%section.products
+  %h2 Listagem de produtos
+  %ul
+    %li
+      %strong Nome
+    %li.menu
+      - @users_categories.each do |users_category| 
+        %ul
+          %li
+            %span= users_product.name
+          %li
+            = link_to 'Editar', edit_users_category_path(users_category)
+          %li
+            = link_to 'Deletar', [:users, users_category], :confirm => 'Você tem certeza?', :method => :delete
+    %li
+      = link_to 'Nova Categoria', new_users_category_path

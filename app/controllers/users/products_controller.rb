@@ -35,7 +35,7 @@ class Users::ProductsController < ApplicationController
 
     respond_to do |format|
       if @users_product.save
-        format.html { redirect_to users_products_path , notice: 'Product was successfully created.' }
+        format.html { redirect_to users_products_path , notice: 'Produto foi criado com sucesso.' }
       else
         format.html { render action: "new" }
       end
@@ -49,7 +49,7 @@ class Users::ProductsController < ApplicationController
 
     respond_to do |format|
       if @users_product.update_attributes(params[:product])
-        format.html { redirect_to users_products_path, notice: 'Product was successfully updated.' }
+        format.html { redirect_to users_products_path, notice: 'Produto foi alterado com sucesso.' }
       else
         format.html { render action: "edit" }
       end

@@ -33,7 +33,7 @@ class Users::CategoriesController < ApplicationController
 
     respond_to do |format|
       if @users_category.save
-        format.html { redirect_to [:users, @users_category], notice: 'Category was successfully created.' }
+        format.html { redirect_to [:users, @users_category], notice: 'Categoria foi criada com sucesso.' }
       else
         format.html { render action: "new" }
       end
@@ -45,7 +45,7 @@ class Users::CategoriesController < ApplicationController
 
     respond_to do |format|
       if @users_category.update_attributes(params[:category])
-        format.html { redirect_to [:users, @users_category], notice: 'Category was successfully updated.' }
+        format.html { redirect_to [:users, @users_category], notice: 'Categoria foi alterada com sucesso.' }
       else
         format.html { render action: "edit" }
 

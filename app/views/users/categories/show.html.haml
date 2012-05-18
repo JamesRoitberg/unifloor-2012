@@ -1,9 +1,9 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @users_category.name
-
-= link_to 'Edit', edit_users_category_path(@users_category)
-\|
-= link_to 'Back', users_categories_path
+%section.categories_show
+  %h2#notice= notice
+  %strong Nome:
+  %span
+    = @users_category.name
+  .edit_back
+    = link_to 'Editar', edit_users_category_path(@users_category)
+    \|
+    = link_to 'Voltar', users_categories_path
