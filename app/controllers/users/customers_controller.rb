@@ -29,4 +29,9 @@ class Users::CustomersController < ApplicationController
   def new
     @customer = Customer.new
   end
+  
+  def update
+    @customer = Customer.find(params[:id])
+    @customer.update_attributes(params[:customer])
+  end
 end

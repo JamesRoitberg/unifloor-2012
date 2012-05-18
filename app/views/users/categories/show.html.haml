@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @users_category.name
+
+= link_to 'Edit', edit_users_category_path(@users_category)
+\|
+= link_to 'Back', users_categories_path

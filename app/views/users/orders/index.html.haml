@@ -1,0 +1,27 @@
+%h1 Listing users_orders
+
+%table
+  %tr
+    %th Code
+    %th Costumer
+    %th User
+    %th Price
+    %th Action
+    %th
+    %th
+    %th
+
+  - @users_orders.each do |users_order|
+    %tr
+      %td= users_order.code
+      %td= users_order.costumer
+      %td= users_order.user
+      %td= users_order.price
+      %td= users_order.action
+      %td= link_to 'Show', users_order
+      %td= link_to 'Edit', edit_users_order_path(users_order)
+      %td= link_to 'Destroy', users_order, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Order', new_users_order_path

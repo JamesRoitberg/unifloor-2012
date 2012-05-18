@@ -1,0 +1,25 @@
+= form_for @users_order do |f|
+  -if @users_order.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@users_order.errors.count, "error")} prohibited this users_order from being saved:"
+      %ul
+        - @users_order.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :code
+    = f.text_field :code
+  .field
+    = f.label :costumer
+    = f.text_field :costumer
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :action
+    = f.check_box :action
+  .actions
+    = f.submit 'Save'

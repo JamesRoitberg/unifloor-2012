@@ -7,14 +7,28 @@ class Users::EmployeesController < ApplicationController
   def create
     @employee = User.new(params[:user])
     @employee.access_type = AccessTypes::EMPLOYEE
-    @employee.save!
-    redirect_to users_root_path
+    if @employee.save!
+      redirect_to users_root_path
+    else
+      respond_with [:users, @employee]
+    end
   end
   
   def show
+    @employee = User.find(params[:id])
   end
   
   def destroy
-    
+    @employee = User.find(params[:id])
+    @employee.destroy!
+  end
+  
+  def edit
+    @employee = User.find(params[:id])
+  end
+  
+  def update
+    @employee = User.find(params[:id])
+    @employee.update_attributes(params[:user])
   end
 end

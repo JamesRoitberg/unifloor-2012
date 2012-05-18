@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  code: MyString
+  costumer: 
+  user: 
+  price: MyString
+  action: false
+
+two:
+  code: MyString
+  costumer: 
+  user: 
+  price: MyString
+  action: false

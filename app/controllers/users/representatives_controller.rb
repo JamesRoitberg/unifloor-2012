@@ -22,6 +22,11 @@ class Users::RepresentativesController < ApplicationController
   
   def destroy
     @representative = User.find(params[:id])
-    @representative.destroy
+    @representative.destroy!
+  end
+  
+  def update
+    @representative = User.find(params[:id])
+    @representative.update_attributes(params[:user])
   end
 end

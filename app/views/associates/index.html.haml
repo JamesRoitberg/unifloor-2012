@@ -6,16 +6,23 @@
       - @admins.each do |admin|
         %li
           = admin.email
+          = link_to 'visualizar',  users_admin_path(admin)
+          = link_to 'editar', edit_users_admin_path(admin)
     = link_to 'Novo Admin', new_users_admin_path
   .representative
     %strong Representantes
     - @representatives.each do |representative|
       %li
         = representative.email
+        = link_to 'visualizar', users_representative_path(representative)
+        = link_to 'editar', edit_users_representative_path(representative)
     = link_to 'Novo Representante', new_users_representative_path
   .emplooye
     %strong Funcionarios
-    - @employees.each do |provider|
+    - @employees.each do |employee|
       %li
-        = provider.email
+        = employee.email
+        = link_to 'visualizar', users_employee_path(employee)
+        = link_to 'editar', edit_users_employee_path(employee)
+        
     = link_to 'Novo Funcionario', new_users_employee_path

@@ -1,0 +1,21 @@
+%h1 Listing users_products
+
+%table
+  %tr
+    %th Name
+    %th Category
+    %th
+    %th
+    %th
+
+  - @users_products.each do |users_product|
+    %tr
+      %td= users_product.name
+      %td= users_product.category
+      %td= link_to 'Show', users_product
+      %td= link_to 'Edit', edit_users_product_path(users_product)
+      %td= link_to 'Destroy', users_product, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Product', new_users_product_path
