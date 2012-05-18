@@ -1,4 +1,4 @@
-= form_for @users_product do |f|
+= form_for [:users, @users_product] do |f|
   -if @users_product.errors.any?
     #error_explanation
       %h2= "#{pluralize(@users_product.errors.count, "error")} prohibited this users_product from being saved:"

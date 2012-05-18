@@ -1,16 +1,12 @@
 class Users::ProductsController < ApplicationController
-  # GET /users/products
-  # GET /users/products.json
   def index
     @users_products = Product.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
     end
   end
 
-  # GET /users/products/1
-  # GET /users/products/1.json
   def show
     @users_product = Product.find(params[:id])
 
@@ -19,8 +15,6 @@ class Users::ProductsController < ApplicationController
     end
   end
 
-  # GET /users/products/new
-  # GET /users/products/new.json
   def new
     @users_product = Product.new
 
@@ -41,7 +35,7 @@ class Users::ProductsController < ApplicationController
 
     respond_to do |format|
       if @users_product.save
-        format.html { redirect_to [:users, @users_product], notice: 'Product was successfully created.' }
+        format.html { redirect_to users_products_path , notice: 'Product was successfully created.' }
       else
         format.html { render action: "new" }
       end
@@ -55,7 +49,7 @@ class Users::ProductsController < ApplicationController
 
     respond_to do |format|
       if @users_product.update_attributes(params[:product])
-        format.html { redirect_to [:users, @users_product], notice: 'Product was successfully updated.' }
+        format.html { redirect_to users_products_path, notice: 'Product was successfully updated.' }
       else
         format.html { render action: "edit" }
       end

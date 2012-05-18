@@ -10,9 +10,8 @@
   - @users_categories.each do |users_category|
     %tr
       %td= users_category.name
-      %td= link_to 'Show', users_category
       %td= link_to 'Edit', edit_users_category_path(users_category)
-      %td= link_to 'Destroy', users_category, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Destroy', [:users, users_category], :confirm => 'Are you sure?', :method => :delete
 
 %br
 
