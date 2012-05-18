@@ -1,5 +1,9 @@
 %section.customers
   %h2 Clientes
   - @customers.each do |customer|
-    = customer.name
-  = link_to 'Novo Cliente', new_users_customer_path
+    %strong 
+      = customer.name
+  %nav
+    %ul
+      %li
+        = link_to 'Novo Cliente', new_users_customer_path

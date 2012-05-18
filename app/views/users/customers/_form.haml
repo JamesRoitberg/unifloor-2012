@@ -1,16 +1,32 @@
 = form_for([:users, @customer], :html => {:multipart => true}) do |f|
-  = f.label "Nome"
-  = f.text_field :name
-  = f.label "email"
-  = f.text_field :address
-  = f.label "Cep"
-  = f.text_field :cep
-  = f.label "Cidade"
-  = f.text_field :city
-  = f.label "UF"
-  = f.text_field :uf
-  = f.label "phone"
-  = f.text_field :phone
-  = f.label "Bairro"
-  = f.text_field :neighborhood
-  = f.submit "Cadastrar"
+  %ul
+    %li.m_right
+      = f.label "Nome"
+      = f.text_field :name
+    %li.m_right
+      = f.label "email"
+      = f.text_field :address
+    %li.m_right
+      = f.label "Cep"
+      = f.text_field :cep
+    %li.m_right
+      = f.label "Cidade"
+      = f.text_field :city
+    %li.m_right
+      = f.label "UF"
+      = f.text_field :uf
+    %li.m_right
+      = f.label "phone"
+      = f.text_field :phone
+    %li.m_right
+      = f.label "Bairro"
+      = f.text_field :neighborhood
+    %li.submit
+      = f.submit "Cadastrar"
+  
+  
+  
+  
+  
+  
+  

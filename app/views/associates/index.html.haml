@@ -5,7 +5,7 @@
     %ul
       - @admins.each do |admin|
         %li
-          = admin.email
+          %span= admin.email
           = link_to 'visualizar',  users_admin_path(admin)
           = link_to 'editar', edit_users_admin_path(admin)
     = link_to 'Novo Admin', new_users_admin_path
@@ -13,7 +13,7 @@
     %strong Representantes
     - @representatives.each do |representative|
       %li
-        = representative.email
+        %span= representative.email
         = link_to 'visualizar', users_representative_path(representative)
         = link_to 'editar', edit_users_representative_path(representative)
     = link_to 'Novo Representante', new_users_representative_path
@@ -21,7 +21,7 @@
     %strong Funcionarios
     - @employees.each do |employee|
       %li
-        = employee.email
+        %span= employee.email
         = link_to 'visualizar', users_employee_path(employee)
         = link_to 'editar', edit_users_employee_path(employee)
         
