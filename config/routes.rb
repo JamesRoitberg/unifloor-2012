@@ -1,16 +1,13 @@
 Unifloor::Application.routes.draw do
-
-  namespace :users do resources :products end
-
-  namespace :users do resources :categories end
-
   devise_for :users
 
   resources :messages
 
   resources :associates
   namespace :users do
+    resources :products
     resources :orders
+    resources :categories
     resources :customers
     resources :employees
     resources :admins
