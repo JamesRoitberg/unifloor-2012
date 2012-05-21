@@ -538,7 +538,7 @@ section.categories
     margin-bottom: 20px
   
 //categories new
-section.categories_new
+section.categories_new, .edit_categories
   @extend .unifloor
   h2
     margin-bottom: 30px
@@ -604,10 +604,15 @@ section.products
 
 
 //products new
-section.products_new
+section.products_new, .edit_products
   @extend .categories_new
   form
     width: 394px
+
+//products show
+section.products_show
+  @extend .categories_show
+
 
 
 
