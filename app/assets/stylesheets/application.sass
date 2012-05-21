@@ -508,27 +508,31 @@ section.categories
   @extend .unifloor
   h2
     margin-bottom: 30px
-  >ul
+  table
     float: left
-    margin: 0 0 50px 30px
-    >li
-      display: block
-      strong
-        color: $main_color
-        font:
-          size: 18px
-      a
+    display: block
+    margin-bottom: 30px
+    tr
+      th
         color: $main_color
         font-size: 18px
-    li.menu
-      margin: 10px 0 10px 20px
-      ul
-        li
-          display: inline
-          margin-right: 20px
-          span
-            color: lighten($main_color2, 20)
-            font-size: 18px
+        padding-bottom: 10px
+        width: 200px
+      td
+        width: 200px
+        font-size: 18px
+        strong
+          color: $main_color2
+          font-size: 18px
+        a
+          color: lighten($main_color2, 20)
+          font-size: 18px
+          &:hover
+            color: $main_color
+            text-decoration: underline
+  a
+    color: $main_color
+    font-size: 18px
   
 //categories new
 section.categories_new
@@ -547,8 +551,15 @@ section.categories_new
         color: $main_color
         font-size: 16px
         margin-bottom: 10px
+        width: 100%
       input
         display: block
+      select
+        background: none
+        +border-radius(5px)
+        border: solid 1px #7A6B68
+        width: 392px
+        height: 37px
     .actions
       input
         &[type="submit"]
@@ -583,9 +594,16 @@ section.categories_show
       &:hover
         text-decoration: underline
 
+//products
+section.products
+  @extend .categories
+
+
 //products new
 section.products_new
   @extend .categories_new
+  form
+    width: 394px
 
 
 

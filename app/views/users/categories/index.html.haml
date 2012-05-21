@@ -1,16 +1,16 @@
 %section.categories
   %h2 Listagem de categoria de produtos
-  %ul
-    %li
-      %strong Nome
-    %li.menu
-      - @users_categories.each do |users_category| 
-        %ul
-          %li
-            %span= users_category.name
-          %li
-            = link_to 'Editar', edit_users_category_path(users_category)
-          %li
-            = link_to 'Deletar', [:users, users_category], :confirm => 'Você tem certeza?', :method => :delete
-    %li
-      = link_to 'Nova Categoria', new_users_category_path
+  %table
+    %tr
+      %th 
+        Nome
+    - @users_categories.each do |users_category|
+      %tr
+        %td
+          %strong
+            = users_category.name
+        %td
+          = link_to 'Editar', edit_users_category_path(users_category)
+        %td
+          = link_to 'Deletar', [:users, users_category], :confirm => 'Você tem certeza?', :method => :delete
+    = link_to 'Nova Categoria', new_users_category_path

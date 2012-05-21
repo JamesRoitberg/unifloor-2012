@@ -1,20 +1,16 @@
-%h1 Produtos
-
-%table
-  %tr
-    %th Nome
-    %th Categoria
-    %th
-    %th
-    %th
-
-  - @users_products.each do |users_product|
+%section.products
+  %h2 Listagem de Produtos
+  %table
     %tr
-      %td= users_product.name
-      %td= users_product.category.name
-      %td= link_to 'Editar', edit_users_product_path(users_product)
-      %td= link_to 'Deletar', [:users ,users_product], :confirm => 'Você tem certeza?', :method => :delete
+      %th Nome
+      %th Categoria
+      %th
+      %th
+    - @users_products.each do |users_product|
+      %tr
+        %td= users_product.name
+        %td= users_product.category
+        %td= link_to 'Editar', edit_users_product_path(users_product)
+        %td= link_to 'Deletar', [:users ,users_product], :confirm => 'Você tem certeza?', :method => :delete
+  = link_to 'Novo Produto', new_users_product_path
 
-%br
-
-= link_to 'Novo produto', new_users_product_path
