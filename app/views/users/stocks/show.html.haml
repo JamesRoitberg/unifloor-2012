@@ -1,18 +1,18 @@
-%p#notice= notice
-
-%p
-  %b Code:
-  = @stock.code
-%p
-  %b Product:
-  = @stock.product.name
-%p
-  %b Status:
-  = @stock.status
-%p
-  %b Amount:
-  = @stock.amount
-
-= link_to 'Edit', edit_users_stock_path([:users, @stock])
-\|
-= link_to 'Back', users_stocks_path
+%section.stocks_show
+  %h2#notice= notice
+  %strong Codigo:
+  %span
+    = @stock.code
+  %strong Produto:
+  %span
+    = @stock.product.name
+  %strong Status:
+  %span
+    = @stock.status
+  %strong Quantidade:
+  %span
+    = @stock.amount
+  .edit_back
+    = link_to 'Editar', edit_users_stock_path([:users, @stock])
+    \|
+    = link_to 'Voltar', users_stocks_path

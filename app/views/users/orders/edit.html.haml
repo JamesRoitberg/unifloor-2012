@@ -1,7 +1,8 @@
-%h1 Editing users_order
+%section.edit_orders
+  %h2 Editar Pedidos
 
-= render 'form'
-
-= link_to 'Show', [:users, @users_order]
-\|
-= link_to 'Back', users_orders_path
+  = render 'form'
+  
+  = link_to 'Mostrar', [:users, @users_order]
+  \|
+  = link_to 'Voltar', users_orders_path

@@ -1,7 +1,8 @@
-%h1 Editing stock
+%section.edit_stocks
+  %h2 Editar Estoque
 
-= render 'form'
-
-= link_to 'Show', [:users, @stock]
+  = render 'form'
+  = link_to 'Mostrar', [:users, @stock]
 \|
-= link_to 'Back', users_stocks_path
+  = link_to 'Voltar', users_stocks_path
+

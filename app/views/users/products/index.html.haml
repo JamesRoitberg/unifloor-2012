@@ -1,5 +1,7 @@
 %section.products
   %h2 Listagem de Produtos
+  = link_to 'Novo Produto', new_users_product_path
+  = link_to "Voltar", users_root_path, :class=> "back"
   %table
     %tr
       %th Nome
@@ -12,5 +14,5 @@
         %td= users_product.category
         %td= link_to 'Editar', edit_users_product_path(users_product)
         %td= link_to 'Deletar', [:users ,users_product], :confirm => 'Você tem certeza?', :method => :delete
-  = link_to 'Novo Produto', new_users_product_path
+
 

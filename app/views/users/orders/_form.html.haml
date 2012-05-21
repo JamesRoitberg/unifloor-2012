@@ -7,19 +7,21 @@
           %li= msg
 
   .field
-    = f.label :code
+    = f.label :Codigo
     = f.text_field :code
   .field
-    = f.label :customer
+    = f.label :Comprador
     = collection_select(:customer, :user_id, Customer.all, :id, :name)
   .field
-    = f.label :user
+    = f.label :Usuário
     = collection_select(:user, :user_id, @representatives, :id, :name)
   .field
-    = f.label :price
+    = f.label :Preço
     = f.text_field :price
   .field
-    = f.label :action
+    = f.label :Ação
     = f.check_box :action
-  .actions
-    = f.submit 'Save'
+  .actions.right
+    = f.submit 'Salvar'
+
+

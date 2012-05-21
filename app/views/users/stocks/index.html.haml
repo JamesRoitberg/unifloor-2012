@@ -1,25 +1,22 @@
-%h1 Listing stocks
-
-%table
-  %tr
-    %th Code
-    %th Product
-    %th Status
-    %th Amount
-    %th
-    %th
-    %th
-
-  - @stocks.each do |stock|
+%section.stocks
+  %h2 Estoques
+  = link_to 'Novo Estoque', new_users_stock_path
+  = link_to "Voltar", users_root_path, :class=> "back"
+  %table
     %tr
-      %td= stock.code
-      %td= stock.product
-      %td= stock.status
-      %td= stock.amount
-      %td= link_to 'Show', [:users, stock]
-      %td= link_to 'Edit', edit_users_stock_path(stock)
-      %td= link_to 'Destroy', [:users, stock], :confirm => 'Are you sure?', :method => :delete
+      %th Codigo
+      %th Produto
+      %th Status
+      %th Quantidade
+    - @stocks.each do |stock|
+      %tr
+        %td= stock.code
+        %td= stock.product
+        %td= stock.status
+        %td= stock.amount
+        %td= link_to 'Mostrar', [:users, stock]
+        %td= link_to 'Editar', edit_users_stock_path(stock)
+        %td= link_to 'Deletar', [:users, stock], :confirm => 'Você tem certeza?', :method => :delete
 
-%br
 
-= link_to 'New Stock', new_users_stock_path
+

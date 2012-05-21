@@ -1,21 +1,21 @@
-%p#notice= notice
-
-%p
-  %b Code:
-  = @users_order.code
-%p
-  %b Costumer:
-  = @users_order.costumer
-%p
-  %b User:
-  = @users_order.user
-%p
-  %b Price:
-  = @users_order.price
-%p
-  %b Action:
-  = @users_order.action
-
-= link_to 'Edit', edit_users_order_path(@users_order)
-\|
-= link_to 'Back', users_orders_path
+%section.orders_show
+  %h2#notice= notice
+  %strong Codigo:
+  %span
+    = @users_order.code
+  %strong Comprador:
+  %span
+    = @users_order.costumer
+  %strong Usuario:
+  %span
+    = @users_order.user
+  %strong Preço
+  %span
+    = @users_order.price
+  %strong Ação:
+  %span
+    = @users_order.action
+  .edit_back
+    = link_to 'Editar', edit_users_order_path(@users_order)
+    \|
+    = link_to 'Voltar', users_orders_path

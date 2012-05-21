@@ -7,16 +7,16 @@
           %li= msg
 
   .field
-    = f.label :code
+    = f.label :Codigo
     = f.text_field :code
   .field
-    = f.label :product
+    = f.label :Produto
     = f.collection_select(:product_id, Product.all, :id, :name)
   .field
-    = f.label :status
+    = f.label :Status
     = f.text_field :status
   .field
-    = f.label :amount
+    = f.label :Quantidade
     = f.text_field :amount
   .actions
-    = f.submit 'Save'
+    = f.submit 'Salvar'

@@ -464,6 +464,11 @@ section.associates
       &:hover
         color: $main_color
         text-decoration: underline
+  a.back
+    color: $main_color
+    font-size: 18px
+    float: right
+    margin-bottom: 20px
 
 //dashboard
 section.dashboard
@@ -488,9 +493,15 @@ section.dashboard
           color: $main_color
           font-size: 18px
           display: block
-          margin-left: 20px
+          margin-left: 30px
           &:hover
             text-decoration: underline
+  a.back
+    color: $main_color
+    font-size: 18px
+    float: right
+    margin-bottom: 20px
+    
 //customers
 section.customers
   @extend .dashboard
@@ -511,7 +522,7 @@ section.categories
   table
     float: left
     display: block
-    margin-bottom: 30px
+    margin: 0 10px 30px 0
     tr
       th
         color: $main_color
@@ -536,6 +547,8 @@ section.categories
     font-size: 18px
     float: left
     margin-bottom: 20px
+  a.back
+    float: right
   
 //categories new
 section.categories_new, .edit_categories
@@ -599,18 +612,20 @@ section.categories_show
         text-decoration: underline
 
 //products
-section.products
+section.products, .orders, .stocks
   @extend .categories
 
 
 //products new
-section.products_new, .edit_products
+section.products_new, .edit_products, .orders_new, .edit_orders, .stocks_new, .edit_stocks, 
   @extend .categories_new
   form
     width: 394px
+    .right
+      float: right
 
 //products show
-section.products_show
+section.products_show, .orders_show, .stocks_show
   @extend .categories_show
 
 
