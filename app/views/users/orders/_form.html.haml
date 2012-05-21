@@ -1,4 +1,4 @@
-= form_for @users_order do |f|
+= form_for [:users, @users_order] do |f|
   -if @users_order.errors.any?
     #error_explanation
       %h2= "#{pluralize(@users_order.errors.count, "error")} prohibited this users_order from being saved:"
@@ -10,11 +10,11 @@
     = f.label :code
     = f.text_field :code
   .field
-    = f.label :costumer
-    = f.text_field :costumer
+    = f.label :customer
+    = collection_select(:customer, :user_id, Customer.all, :id, :name)
   .field
     = f.label :user
-    = f.text_field :user
+    = collection_select(:user, :user_id, @representatives, :id, :name)
   .field
     = f.label :price
     = f.text_field :price

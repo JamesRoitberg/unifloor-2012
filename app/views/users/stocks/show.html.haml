@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Code:
+  = @stock.code
+%p
+  %b Product:
+  = @stock.product.name
+%p
+  %b Status:
+  = @stock.status
+%p
+  %b Amount:
+  = @stock.amount
+
+= link_to 'Edit', edit_users_stock_path([:users, @stock])
+\|
+= link_to 'Back', users_stocks_path

@@ -1,0 +1,22 @@
+= form_for [:users, @stock] do |f|
+  -if @stock.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@stock.errors.count, "error")} prohibited this stock from being saved:"
+      %ul
+        - @stock.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :code
+    = f.text_field :code
+  .field
+    = f.label :product
+    = f.collection_select(:product_id, Product.all, :id, :name)
+  .field
+    = f.label :status
+    = f.text_field :status
+  .field
+    = f.label :amount
+    = f.text_field :amount
+  .actions
+    = f.submit 'Save'

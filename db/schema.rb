@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120518124437) do
+ActiveRecord::Schema.define(:version => 20120518174622) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20120518124437) do
 
   create_table "orders", :force => true do |t|
     t.string   "code"
-    t.integer  "costumer_id"
+    t.integer  "customer_id"
     t.integer  "user_id"
     t.string   "price"
     t.boolean  "action"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(:version => 20120518124437) do
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "orders", ["costumer_id"], :name => "index_orders_on_costumer_id"
+  add_index "orders", ["customer_id"], :name => "index_orders_on_customer_id"
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
 
   create_table "products", :force => true do |t|
@@ -79,12 +79,14 @@ ActiveRecord::Schema.define(:version => 20120518124437) do
 
   create_table "stocks", :force => true do |t|
     t.string   "code"
-    t.string   "product"
+    t.integer  "product_id"
     t.string   "status"
     t.string   "amount"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  add_index "stocks", ["product_id"], :name => "index_stocks_on_product_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

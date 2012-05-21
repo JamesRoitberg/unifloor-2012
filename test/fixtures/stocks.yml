@@ -2,12 +2,12 @@
 
 one:
   code: MyString
-  product: MyString
+  product: 
   status: MyString
   amount: MyString
 
 two:
   code: MyString
-  product: MyString
+  product: 
   status: MyString
   amount: MyString

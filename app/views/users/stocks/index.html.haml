@@ -1,0 +1,25 @@
+%h1 Listing stocks
+
+%table
+  %tr
+    %th Code
+    %th Product
+    %th Status
+    %th Amount
+    %th
+    %th
+    %th
+
+  - @stocks.each do |stock|
+    %tr
+      %td= stock.code
+      %td= stock.product
+      %td= stock.status
+      %td= stock.amount
+      %td= link_to 'Show', [:users, stock]
+      %td= link_to 'Edit', edit_users_stock_path(stock)
+      %td= link_to 'Destroy', [:users, stock], :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Stock', new_users_stock_path

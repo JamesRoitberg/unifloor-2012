@@ -17,7 +17,7 @@ class Users::OrdersController < ApplicationController
 
   def new
     @users_order = Order.new
-
+    @representatives = User.get_representatives
     respond_to do |format|
       format.html # new.html.erb
     end
@@ -32,7 +32,6 @@ class Users::OrdersController < ApplicationController
   # POST /users/orders.json
   def create
     @users_order = Order.new(params[:order])
-
     respond_to do |format|
       if @users_order.save
         format.html { redirect_to [:users, @users_order], notice: 'Order was successfully created.' }

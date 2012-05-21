@@ -9,7 +9,6 @@ class Users::ProductsController < ApplicationController
 
   def show
     @users_product = Product.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
     end
@@ -17,7 +16,7 @@ class Users::ProductsController < ApplicationController
 
   def new
     @users_product = Product.new
-
+    @categories = Category.all
     respond_to do |format|
       format.html # new.html.erb
     end
@@ -26,13 +25,13 @@ class Users::ProductsController < ApplicationController
   # GET /users/products/1/edit
   def edit
     @users_product = Product.find(params[:id])
+    @categories = Category.all
   end
 
   # POST /users/products
   # POST /users/products.json
   def create
     @users_product = Product.new(params[:product])
-
     respond_to do |format|
       if @users_product.save
         format.html { redirect_to users_products_path , notice: 'Produto foi criado com sucesso.' }
@@ -46,7 +45,6 @@ class Users::ProductsController < ApplicationController
   # PUT /users/products/1.json
   def update
     @users_product = Product.find(params[:id])
-
     respond_to do |format|
       if @users_product.update_attributes(params[:product])
         format.html { redirect_to users_products_path, notice: 'Produto foi alterado com sucesso.' }

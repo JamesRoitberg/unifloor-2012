@@ -18,9 +18,9 @@
       %td= users_order.user
       %td= users_order.price
       %td= users_order.action
-      %td= link_to 'Show', users_order
+      %td= link_to 'Show', [:users, users_order]
       %td= link_to 'Edit', edit_users_order_path(users_order)
-      %td= link_to 'Destroy', users_order, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Destroy', [:users, users_order], :confirm => 'Are you sure?', :method => :delete
 
 %br
 

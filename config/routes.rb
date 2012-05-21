@@ -1,10 +1,12 @@
 Unifloor::Application.routes.draw do
+
   devise_for :users
 
   resources :messages
 
   resources :associates
   namespace :users do
+    resources :stocks
     resources :products
     resources :orders
     resources :categories
