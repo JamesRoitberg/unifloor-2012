@@ -1,5 +1,6 @@
 class Users::CategoriesController < ApplicationController
-
+  before_filter {|c| c.can_handle?(:category)}
+  
   def index
     @users_categories = Category.all
 

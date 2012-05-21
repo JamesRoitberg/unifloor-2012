@@ -1,4 +1,5 @@
 class Users::ProductsController < ApplicationController
+  before_filter {|c| c.can_handle?(:product)}
   def index
     @users_products = Product.all
 

@@ -1,5 +1,8 @@
+# -*- encoding : utf-8 -*-
 class Users::AdminsController < ApplicationController
-
+  
+  before_filter {|c| c.can_handle?(:admin)}
+  
   def new
     @admin = User.new
   end

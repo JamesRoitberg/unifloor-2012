@@ -1,4 +1,5 @@
 class Users::OrdersController < ApplicationController
+  before_filter {|c| c.can_handle?(:order)}
   def index
     @users_orders = Order.all
 

@@ -1,5 +1,6 @@
 class Users::CustomersController < ApplicationController
-  
+  before_filter {|c| c.can_handle?(:customer)}
+    
   def index
     @customers = Customer.all
   end

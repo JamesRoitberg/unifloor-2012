@@ -1,5 +1,5 @@
 class Users::EmployeesController < ApplicationController
-  
+    before_filter {|c| c.can_handle?(:employee)}
   def new
     @employee = User.new
   end
@@ -8,7 +8,7 @@ class Users::EmployeesController < ApplicationController
     @employee = User.new(params[:user])
     @employee.access_type = AccessTypes::EMPLOYEE
     if @employee.save!
-      redirect_to users_root_path
+      redirect_to associates_path
     else
       respond_with [:users, @employee]
     end
@@ -30,5 +30,6 @@ class Users::EmployeesController < ApplicationController
   def update
     @employee = User.find(params[:id])
     @employee.update_attributes(params[:user])
+    redirect_to associates_path
   end
 end

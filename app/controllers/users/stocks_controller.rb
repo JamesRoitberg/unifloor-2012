@@ -1,4 +1,5 @@
 class Users::StocksController < ApplicationController
+  before_filter {|c| c.can_handle?(:stock)}
   # GET /stocks
   # GET /stocks.json
   def index
