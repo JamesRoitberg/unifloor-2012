@@ -11,7 +11,7 @@
     - @users_products.each do |users_product|
       %tr
         %td= users_product.name
-        %td= users_product.category
+        %td= users_product.category.name
         %td= link_to 'Editar', edit_users_product_path(users_product)
         %td= link_to 'Deletar', [:users ,users_product], :confirm => 'Você tem certeza?', :method => :delete
 

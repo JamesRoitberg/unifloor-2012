@@ -11,10 +11,9 @@
     - @stocks.each do |stock|
       %tr
         %td= stock.code
-        %td= stock.product
+        %td= stock.product.name
         %td= stock.status
         %td= stock.amount
-        %td= link_to 'Mostrar', [:users, stock]
         %td= link_to 'Editar', edit_users_stock_path(stock)
         %td= link_to 'Deletar', [:users, stock], :confirm => 'Você tem certeza?', :method => :delete
 
