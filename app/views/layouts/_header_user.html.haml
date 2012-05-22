@@ -1,0 +1,23 @@
+%header.user
+  .left
+    %h2 Painel de Controle
+    %hr
+  %nav.header
+    %ul
+      %li
+        = link_to "Associados", associates_path
+      %li
+        = link_to 'Clientes', users_customers_path
+      %li
+        = link_to 'Categorias', users_categories_path
+      %li
+        = link_to 'Produtos', users_products_path
+      %li
+        = link_to 'Pedidos', users_orders_path
+      %li.last
+        = link_to 'Estoque', users_stocks_path
+  .logo
+    %h1 Unifloor , piso laminado
+    #{link_to " ", root_path}
+  %hr.right
+  

@@ -1,21 +1,21 @@
 %section.orders_show
   %h2#notice= notice
-  %strong Codigo:
-  %span
-    = @users_order.code
-  %strong Comprador:
-  %span
-    = @users_order.costumer
-  %strong Usuario:
-  %span
-    = @users_order.user
-  %strong Preço
-  %span
-    = @users_order.price
-  %strong Ação:
-  %span
-    = @users_order.action
   .edit_back
     = link_to 'Editar', edit_users_order_path(@users_order)
     \|
     = link_to 'Voltar', users_orders_path
+  %table
+    %tr
+      %th Codigo
+      %th Comprador
+      %th Usuario
+      %th Peço
+      %th Ação
+    %tr
+      %td= @users_order.code
+      %td= @users_order.costumer
+      %td= @users_order.user
+      %td= @users_order.price
+      %td= @users_order.action
+  
+

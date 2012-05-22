@@ -111,6 +111,27 @@ nav.header
     &:hover
       text-decoration: underline
 
+//header user
+header.user
+  .left
+    float: left
+    h2
+      margin: 84px 0 20px 0
+  nav.header
+    float: left
+    width: 535px
+    ul
+      li
+        a
+          margin-left: 20px
+          font-weight: normal
+      .last
+        margin-right: 0
+  .logo
+    float: right
+  hr.right
+    margin-top: 0
+
 //footer
 section.footer
   width: 100%
@@ -128,7 +149,6 @@ section.footer
     float: right
     width: 248px
     text-align: center
-
 
 //home
 section.home
@@ -549,6 +569,12 @@ section.categories
     margin-bottom: 20px
   a.back
     float: right
+  .edit_back
+    float: right
+    a
+      color: $main_color
+      font-size: 16px
+
   
 //categories new
 section.categories_new, .edit_categories
@@ -612,7 +638,7 @@ section.categories_show
         text-decoration: underline
 
 //products
-section.products, .orders, .stocks
+section.products, .orders, .stocks, .orders_show
   @extend .categories
 
 
@@ -625,7 +651,7 @@ section.products_new, .edit_products, .orders_new, .edit_orders, .stocks_new, .e
       float: right
 
 //products show
-section.products_show, .orders_show, .stocks_show
+section.products_show, .stocks_show
   @extend .categories_show
 
 
