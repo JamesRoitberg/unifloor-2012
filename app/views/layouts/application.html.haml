@@ -8,8 +8,12 @@
     =csrf_meta_tags 
   %body
     .container
-      %header
-        =render 'layouts/header_user'
+      - if current_user
+        %header
+          =render 'layouts/header_user'
+      - else
+        %header
+          =render 'layouts/header'
       =yield 
       %footer
         =render 'layouts/footer'
