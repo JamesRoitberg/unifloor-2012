@@ -4,13 +4,13 @@
       = f.label "Nome"
       = f.text_field :name
     %li
-      = f.label "email"
+      = f.label "Email"
       = f.text_field :email
     %li.m_right
-      = f.label "senha"
+      = f.label "Senha"
       = f.password_field :password
     %li
-      = f.label "confirmacao de senha"
+      = f.label "Confirmacao de Senha"
       = f.password_field :password_confirmation
     = f.fields_for :representative do |builder| 
       %li.m_right
@@ -42,8 +42,6 @@
         = builder.text_field :cellphone
       %li.submit
         = f.submit 'Cadastrar'
-
-
 
   
   
