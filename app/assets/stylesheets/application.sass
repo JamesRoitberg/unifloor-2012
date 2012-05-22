@@ -78,7 +78,11 @@ body
       border: none
       height: 1px
       background: $main_color
-
+    input.error
+      border: 1px solid #FF0000
+    label.error
+      color: #FF0000
+      margin-top: 5px
 
 //header
 .logo
@@ -453,6 +457,10 @@ section.representative
       li.submit
         overflow: hidden
         clear: both
+  a.back
+    color: $main_color
+    float: right
+
 
 //new employees
 section.employees
@@ -612,7 +620,7 @@ section.categories_new, .edit_categories
         color: $main_color
         border: $border_default
         cursor: pointer
-  a
+  >a
     margin-left: 20px
     font-size: 16px
     color: $main_color

@@ -4,6 +4,7 @@
     %title 
       UniFloor | #{@title}
     =stylesheet_link_tag    "application", :media => "all"
+    =stylesheet_link_tag    "dropkick"
     <meta name="google-site-verification" content="7yKr3LRahAG7HvFtLmDzUGOOEUKb9SKTzsXvLJQ-5a8" /> 
     =csrf_meta_tags 
   %body
@@ -18,3 +19,5 @@
       %footer
         =render 'layouts/footer'
     =javascript_include_tag "application"
+    =javascript_include_tag "jquery.validate"
+    =javascript_include_tag "jquery.dropkick-1.0.0"

@@ -22,6 +22,8 @@ var ctrl_interval;
 
 $( document ).ready( function(){
 
+	$("select").dropkick();
+
    // display none em todos os elementos menos o primeiro
    $('.home figure ul.slide_container li:not(:first)').hide();
    
@@ -112,6 +114,43 @@ $( document ).ready( function(){
 		}	
 	})
 	//Accessories End
+
+	//Validation
+	$('#new_user').validate();
+	$('#new_user #user_name').rules("add", {
+		required        : true,
+		messages        : {
+		  	required: "Campo nome obrigatório."
+		}
+	});
+	$('#new_user #user_email').rules("add", {
+		required        : true,
+		email           : true,
+		messages        : {
+		  	required: "Campo email obrigatório.", 
+		  	email: "Campo email inválido."
+		}
+	});
+	$('#new_user #user_password').rules("add", {
+		required        : true,
+		minlength       : 6,
+		messages        : {
+		  	required: "Campo senha obrigatório.", 
+		  	minlength: "A senha deve conter no mínimo 6 dígitos."
+		}
+	});
+	$('#new_user #user_password_confirmation').rules("add", {
+		required        : true,
+		minlength       : 6,
+		equalTo         : "#user_password",
+		messages        : {
+		  	required: "Campo senha obrigatório.", 
+		  	minlength: "A senha deve conter no mínimo 6 dígitos.",
+		  	equalTo: "As senhas não conferem."
+		}
+	});
+
+
 });
 
 function slide(){
