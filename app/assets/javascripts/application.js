@@ -149,6 +149,148 @@ $( document ).ready( function(){
 		  	equalTo: "As senhas não conferem."
 		}
 	});
+	$('#new_user #user_representative_attributes_cpf').rules("add", {
+		required          : true,
+		minlength         : 11,
+		maxlength		  : 11,
+		digits            : true,
+		messages          : {
+			required: "Campo CPF obrigatório.", 
+		  	minlength: "O CPF deve conter 11 dígitos.",
+		  	maxlength: "O CPF deve conter 11 dígitos.",
+		  	digits: "O campo aceita apenas digitos."
+		}
+	});
+	$('#new_user #user_representative_attributes_rg').rules("add", {
+		required          : true,
+		minlength         : 9,
+		maxlength		  : 9,
+		digits            : true,
+		messages          : {
+			required: "Campo Rg obrigatório.", 
+		  	minlength: "O Rg deve conter 9 dígitos.",
+		  	maxlength: "O Rg deve conter 9 dígitos.",
+		  	digits: "O campo aceita apenas digitos."
+		}
+	});
+	$('#new_user #user_representative_attributes_rg').rules("add", {
+		required          : true,
+		minlength         : 9,
+		maxlength		  : 9,
+		digits            : true,
+		messages          : {
+			required: "Campo Rg obrigatório.", 
+		  	minlength: "O Rg deve conter 9 dígitos.",
+		  	maxlength: "O Rg deve conter 9 dígitos.",
+		  	digits: "O campo aceita apenas digitos."
+		}
+	});
+	$('#new_user #user_representative_attributes_address').rules("add", {
+		required          : true,
+		messages          : {
+			required: "Campo Endereço obrigatório.", 
+		}
+	});
+	$('#new_user #user_representative_attributes_neighborhood').rules("add", {
+		required          : true,
+		messages          : {
+		required: "Campo Bairro obrigatório.", 
+		}
+	});
+	$('#new_user #user_representative_attributes_cep').rules("add", {
+		required          : true,
+		minlength         : 8,
+		maxlength		  : 8,
+		digits            : true,
+		messages          : {
+			required: "Campo CEP obrigatório.", 
+		  	minlength: "O CEP deve conter 8 dígitos.",
+		  	maxlength: "O CEP deve conter 8 dígitos.",
+		  	digits: "O campo aceita apenas digitos."
+		}
+	});
+	$('#new_user #user_representative_attributes_city').rules("add", {
+		required          : true,
+		messages          : {
+		required: "Campo Cidade obrigatório.", 
+		}
+	});
+	$('#new_user #user_representative_attributes_uf').rules("add", {
+		required          : true,
+		messages          : {
+		required: "Campo Estado obrigatório.", 
+		}
+	});
+	$('#new_user #user_representative_attributes_phone').rules("add", {
+		required          : true,
+		digits            : true,
+		messages          : {
+			required: "Campo Telefone obrigatório.", 
+		  	digits: "O campo aceita apenas digitos."
+		}
+	});
+	$('#new_user #user_representative_attributes_cellphone').rules("add", {
+		required          : true,
+		digits            : true,
+		messages          : {
+			required: "Campo Celular obrigatório.", 
+		  	digits: "O campo aceita apenas digitos."
+		}
+	});
+
+	$('#new_customer').validate();
+	$('#new_customer #customer_name').rules("add", {
+		required        : true,
+		messages        : {
+		  	required: "Campo nome obrigatório."
+		}
+	});
+	$('#new_customer #customer_email').rules("add", {
+		required        : true,
+		email           : true,
+		messages        : {
+		  	required: "Campo email obrigatório.", 
+		  	email: "Campo email inválido."
+		}
+	});
+	$('#new_customer #customer_representative_attributes_cep').rules("add", {
+		required          : true,
+		minlength         : 8,
+		maxlength		  : 8,
+		digits            : true,
+		messages          : {
+			required: "Campo CEP obrigatório.", 
+		  	minlength: "O CEP deve conter 8 dígitos.",
+		  	maxlength: "O CEP deve conter 8 dígitos.",
+		  	digits: "O campo aceita apenas digitos."
+		}
+	});
+	$('#new_customer #customer_representative_attributes_city').rules("add", {
+		required          : true,
+		messages          : {
+		required: "Campo Cidade obrigatório.", 
+		}
+	});
+	$('#new_customer #customer_representative_attributes_uf').rules("add", {
+		required          : true,
+		messages          : {
+		required: "Campo Estado obrigatório.", 
+		}
+	});
+	$('#new_customer #customer_representative_attributes_phone').rules("add", {
+		required          : true,
+		digits            : true,
+		messages          : {
+			required: "Campo Telefone obrigatório.", 
+		  	digits: "O campo aceita apenas digitos."
+		}
+	});
+	$('#new_customer #customer_representative_attributes_neighborhood').rules("add", {
+		required          : true,
+		messages          : {
+		required: "Campo Bairro obrigatório.", 
+		}
+	});
 
 
 });
