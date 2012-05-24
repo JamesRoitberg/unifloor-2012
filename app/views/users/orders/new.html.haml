@@ -1,3 +1,7 @@
+- content_for :javascripts do
+  =javascript_include_tag "jquery.validate"
+  =javascript_include_tag "neworder_validation"
+
 %section.orders_new
   %h2 Novo pedido
   = render 'form'

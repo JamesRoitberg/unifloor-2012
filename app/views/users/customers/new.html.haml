@@ -1,3 +1,7 @@
+- content_for :javascripts do
+  =javascript_include_tag "jquery.validate"
+  =javascript_include_tag "newcostumer_validation"
+
 %section.new_costumers
   %h2 Novo cliente
   = link_to 'Voltar', associates_path, :class =>"back"

@@ -1,3 +1,7 @@
+- content_for :javascripts do
+  =javascript_include_tag "jquery.validate"
+  =javascript_include_tag "newstock_validation"
+
 %section.stocks_new
   %h2 Novo estoque
   = render 'form'

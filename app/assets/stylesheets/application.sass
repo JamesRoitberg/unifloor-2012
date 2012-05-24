@@ -443,7 +443,6 @@ section.representative
         label
           color: $main_color
           display: block
-          overflow: hidden
         input
           &[type="submit"]
             width: 81px
@@ -477,6 +476,8 @@ section.associates
   .administrator, .representative, .emplooye
     margin: 50px
     float: left
+    li
+      list-style: none
     strong
       color: $main_color
       font-size: 18px
@@ -533,10 +534,6 @@ section.dashboard
     float: right
     margin-bottom: 20px
     
-//customers
-section.customers
-  @extend .dashboard
-
 //new_costumers
 section.new_costumers
   @extend .representative
@@ -554,6 +551,7 @@ section.categories
     float: left
     display: block
     margin: 0 10px 30px 0
+    width: 100%
     tr
       th
         color: $main_color
@@ -605,6 +603,8 @@ section.categories_new, .edit_categories
         font-size: 16px
         margin-bottom: 10px
         width: 100%
+      label.error
+        color: #FF0000
       input
         display: block
       select
@@ -649,9 +649,9 @@ section.categories_show
         text-decoration: underline
 
 //products
-section.products, .orders, .stocks, .orders_show
+section.products, .orders, .stocks, .orders_show, .customers
   @extend .categories
-
+  
 
 //products new
 section.products_new, .edit_products, .orders_new, .edit_orders, .stocks_new, .edit_stocks, 
@@ -662,7 +662,7 @@ section.products_new, .edit_products, .orders_new, .edit_orders, .stocks_new, .e
       float: right
 
 //products show
-section.products_show, .stocks_show
+section.products_show, .stocks_show, .show_customers
   @extend .categories_show
 
 

@@ -1,4 +1,8 @@
+- content_for :javascripts do
+  =javascript_include_tag "jquery.validate"
+  =javascript_include_tag "newproduct_validation"
+
 %section.products_new
-	%h2 Novo produto
-	= render 'form'
-	= link_to 'Voltar', users_products_path
+  %h2 Novo produto
+  = render 'form'
+  = link_to 'Voltar', users_products_path
