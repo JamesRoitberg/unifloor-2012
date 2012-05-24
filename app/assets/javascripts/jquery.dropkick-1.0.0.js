@@ -66,6 +66,8 @@
   methods.init = function (settings) {
     settings = $.extend({}, defaults, settings);
 
+    console.log('teste')
+
     return this.each(function () {
       var
         // The current <select> element
