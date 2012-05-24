@@ -42,5 +42,87 @@ $(document).ready(function(){
 				}
 			});
 		}
+		if($('#new_user #user_representative_attributes_cpf').length){
+			$('#new_user #user_representative_attributes_cpf').rules("add", {
+				required        : true,
+				digits			: true,
+				messages        : {
+				  	required: "Campo CPF obrigatório.", 
+				  	digits: "Apenas dígitos"			  	
+				}
+			});
+		}
+		if($('#new_user #user_representative_attributes_rg').length){
+			$('#new_user #user_representative_attributes_rg').rules("add", {
+				required        : true,
+				digits			: true,
+				messages        : {
+				  	required: "Campo Rg obrigatório.", 
+				  	digits: "Apenas dígitos"			  	
+				}
+			});
+		}
+		if($('#new_user #user_representative_attributes_address').length){
+			$('#new_user #user_representative_attributes_address').rules("add", {
+				required        : true,
+				messages        : {
+				  	required: "Campo endereço obrigatório.", 
+				}
+			});
+		}
+		if($('#new_user #user_representative_attributes_neighborhood').length){
+			$('#new_user #user_representative_attributes_neighborhood').rules("add", {
+				required        : true,
+				messages        : {
+				  	required: "Campo Bairro obrigatório.", 
+				}
+			});
+		}
+		if($('#new_user #user_representative_attributes_cep').length){
+			$('#new_user #user_representative_attributes_cep').rules("add", {
+				required        : true,
+				digits			: true,
+				messages        : {
+				  	required: "Campo Cep obrigatório.", 
+				  	digits: "Apenas dígitos"		
+				}
+			});
+		}
+		if($('#new_user #user_representative_attributes_city').length){
+			$('#new_user #user_representative_attributes_city').rules("add", {
+				required        : true,
+				messages        : {
+				  	required: "Campo Cidade obrigatório.", 
+				}
+			});
+		}
+		if($('#new_user #user_representative_attributes_uf').length){
+			$('#new_user #user_representative_attributes_uf').rules("add", {
+				required        : true,
+				messages        : {
+				  	required: "Campo Uf obrigatório.", 
+				}
+			});
+		}
+		if($('#new_user #user_representative_attributes_phone').length){
+			$('#new_user #user_representative_attributes_phone').rules("add", {
+				required        : true,
+				digits			: true,
+				messages        : {
+				  	required: "Campo Telefone obrigatório.",
+				  	digits: "Apenas dígitos"
+				}
+			});
+		}
+		if($('#new_user #user_representative_attributes_cellphone').length){
+			$('#new_user #user_representative_attributes_cellphone').rules("add", {
+				required        : true,
+				digits			: true,
+				messages        : {
+				  	required: "Campo Celular obrigatório.",
+				  	digits: "Apenas dígitos"
+				}
+			});
+		}
 	}
 })
