@@ -449,6 +449,7 @@ section.representative
       li
         margin-bottom: 25px
         float: left
+        margin-right: 25px
         label
           color: $main_color
           display: block
@@ -583,21 +584,10 @@ section.categories
           &:hover
             color: $main_color
             text-decoration: underline
-  >a
-    color: $main_color
-    font-size: 18px
-    float: left
-    margin-bottom: 20px
   a.back
     +button( $main_color, #FFF, 18px )
     float: right
     margin-bottom: 20px
-  .edit_back
-    float: right
-    a
-      color: $main_color
-      font-size: 16px
-
   
 //categories new
 section.categories_new, .edit_categories
@@ -609,7 +599,7 @@ section.categories_new, .edit_categories
     margin-bottom: 50px
     .field
       float: left
-      margin-bottom: 20px
+      margin: 0 20px 20px 0
       label
         display: block
         float: left
@@ -660,13 +650,16 @@ section.categories_show
         text-decoration: underline
 
 //products
-section.products, .orders, .stocks, .orders_show, .customers
+section.products, .orders, .stocks, .orders_show, .customers, .admins_show, .representatives_show, .employees_show
   @extend .categories
   
 
 //products new
-section.products_new, .edit_products, .orders_new, .edit_orders, .stocks_new, .edit_stocks, 
+section.products_new, .edit_products, .orders_new, .edit_orders, .stocks_new, .edit_stocks, .representative_edit, .edit_employees, .edit_admins
   @extend .categories_new
+  a
+    color: $main_color
+    font-size: 16px
   form
     width: 394px
     .right

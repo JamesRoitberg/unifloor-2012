@@ -1,46 +1,46 @@
 = form_for(@representative, url: users_representatives_path,  :html => {:multipart => true, :class=> 'default_form'}) do |f|
   %ul
-    %li.m_right
+    %li.field
       = f.label "Nome"
       = f.text_field :name
-    %li
+    %li.field
       = f.label "Email"
       = f.text_field :email
-    %li.m_right
+    %li.field
       = f.label "Senha"
       = f.password_field :password
-    %li
+    %li.field
       = f.label "Confirmacao de Senha"
       = f.password_field :password_confirmation
     = f.fields_for :representative do |builder| 
-      %li.m_right
+      %li.field
         = f.label "CPF"
         = builder.text_field :cpf
-      %li
+      %li.field
         = f.label "RG"
         = builder.text_field :rg
-      %li.m_right
+      %li.field
         = f.label "Endereco"
         = builder.text_field :address
-      %li
+      %li.field
         = f.label "Bairro"
         = builder.text_field :neighborhood
-      %li.m_right
+      %li.field
         = f.label "CEP"
         = builder.text_field :cep
-      %li
+      %li.field
         = f.label "Cidade"
         = builder.text_field :city
-      %li.m_right
+      %li.field
         = f.label "UF"
         = builder.text_field :uf
-      %li
+      %li.field
         = f.label "Telefone"
         = builder.text_field :phone
-      %li.m_right
+      %li.field
         = f.label "Celular"
         = builder.text_field :cellphone
-      %li.submit
+      %li.actions
         = f.submit 'Cadastrar'
 
   

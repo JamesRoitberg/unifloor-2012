@@ -1,18 +1,18 @@
 = form_for(@admin, url: users_admins_path,  :html => {:multipart => true}) do |f|
   %ul
-    %li.m_right
+    %li.field
       = f.label "Nome"
       = f.text_field :name
-    %li.m_right
+    %li.field
       = f.label "Email"
       = f.text_field :email
-    %li.m_right
+    %li.field
       = f.label "Senha"
       = f.password_field :password
-    %li.m_right
+    %li.field
       = f.label "Confirmacao de Senha"
       = f.password_field :password_confirmation
-    %li.submit
+    %li.actions
       = f.submit "Cadastrar"
 
   

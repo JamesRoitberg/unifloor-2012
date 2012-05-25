@@ -1,1 +1,13 @@
-= link_to 'Voltar', associates_path, :class =>"back"
+%section.representatives_show
+  %h2#notice= notice
+  .edit_back
+    = link_to 'Voltar', associates_path, :class =>"back"
+  %table
+    %tr
+      %th Nome
+      %th E-mail
+    %tr
+      %td= @representative.name
+      %td= @representative.email
+
+

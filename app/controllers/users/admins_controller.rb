@@ -23,4 +23,15 @@ class Users::AdminsController < ApplicationController
     @admin.destroy!
     redirect_to users_root_path
   end
+  
+  def edit
+    @admin = User.find(params[:id])
+  end
+
+  def update
+    @admin = User.find(params[:id])
+    @admin.update_attributes(params[:user])  
+  end
 end
+
+
