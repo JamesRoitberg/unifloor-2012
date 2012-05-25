@@ -13,8 +13,8 @@
       %th Ação
     %tr
       %td= @users_order.code
-      %td= @users_order.costumer
-      %td= @users_order.representative
+      %td= @users_order.customer.name
+      %td= @users_order.user.name
       %td= @users_order.price
       %td= @users_order.action
   
