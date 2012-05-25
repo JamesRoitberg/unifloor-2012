@@ -466,10 +466,9 @@ section.representative
         overflow: hidden
         clear: both
   a.back
-    color: $main_color
+    +button( $main_color, #FFF, 18px )
     float: right
-    font-size: 16px
-    +border-radius(5px)
+    margin-bottom: 20px
 
 
 
@@ -636,13 +635,10 @@ section.categories_new, .edit_categories
         color: $main_color
         border: $border_default
         cursor: pointer
-  >a
-    margin-left: 20px
-    font-size: 16px
-    color: $main_color
-    float: left
-    &:hover
-      text-decoration: underline  
+  >a.back
+    +button( $main_color, #FFF, 18px )
+    float: right
+    margin-bottom: 20px
 
 //categories show
 section.categories_show
