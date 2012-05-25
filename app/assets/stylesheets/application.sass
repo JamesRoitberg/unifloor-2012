@@ -32,6 +32,15 @@ a
   text-decoration: none
   color: $main_color2
 
+@mixin button( $color1, $color2, $f-size )
+  +background-image(linear-gradient(lighten( $color1, 50 ), darken($color1, 10)))
+  color: $color2
+  font-size: $f-size
+  +border-radius(5px)
+  padding: 5px 10px
+  &:hover
+    +background-image(linear-gradient(darken( $color1, 10 ), lighten( $color1, 50)))
+
 =aside_menu
   width: 95px
   float: left
@@ -460,6 +469,8 @@ section.representative
     color: $main_color
     float: right
     font-size: 16px
+    +border-radius(5px)
+
 
 
 //new employees
@@ -474,7 +485,7 @@ section.admins
 section.associates
   @extend .unifloor
   .administrator, .representative, .emplooye
-    margin: 50px
+    margin: 46px
     float: left
     width: 203px
     li
@@ -498,8 +509,7 @@ section.associates
         color: $main_color
         text-decoration: underline
   a.back
-    color: $main_color
-    font-size: 18px
+    +button( $main_color, #FFF, 18px )
     float: right
     margin-bottom: 20px
 
@@ -532,10 +542,10 @@ section.dashboard
           &:hover
             text-decoration: underline
   a.back
-    color: $main_color
-    font-size: 18px
+    +button( $main_color, #FFF, 18px )
     float: right
     margin-bottom: 20px
+
     
 //new_costumers
 section.new_costumers
@@ -580,7 +590,9 @@ section.categories
     float: left
     margin-bottom: 20px
   a.back
+    +button( $main_color, #FFF, 18px )
     float: right
+    margin-bottom: 20px
   .edit_back
     float: right
     a

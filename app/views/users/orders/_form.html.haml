@@ -13,7 +13,7 @@
     = f.label :Comprador
     = collection_select(:customer, :user_id, Customer.all, :id, :name)
   .field
-    = f.label :Usuário
+    = f.label :Representante
     = collection_select(:user, :user_id, @representatives, :id, :name)
   .field
     = f.label :Preço
