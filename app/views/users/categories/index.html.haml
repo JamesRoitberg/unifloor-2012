@@ -12,6 +12,6 @@
           %strong
             = users_category.name
         %td
-          = link_to 'Editar', edit_users_category_path(users_category)
+          = link_to 'Editar', edit_users_category_path(users_category), :class => "edit"
         %td
-          = link_to 'Deletar', [:users, users_category], :confirm => 'Você tem certeza?', :method => :delete
+          = link_to 'Deletar', [:users, users_category], :confirm => 'Você tem certeza?', :method => :delete, :class => "delete"

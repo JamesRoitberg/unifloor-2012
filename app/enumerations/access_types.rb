@@ -2,6 +2,6 @@ class AccessTypes < EnumerateIt::Base
   associate_values(
     :admin   => ['admin', 'Administrador'],
     :representative  => ['representative', 'Representante'],
-    :employee    => ['employee', 'Funcionario']
+    :employee    => ['employee', 'funcionario']
   )
 end

@@ -1,16 +1,14 @@
 %section.orders_show
   %h2#notice= notice
   .edit_back
-    = link_to 'Editar', edit_users_order_path(@users_order)
-    \|
-    = link_to 'Voltar', users_orders_path
+    = link_to 'Voltar', users_orders_path, :class => "back"
   %table
     %tr
       %th Codigo
       %th Comprador
       %th Representante
-      %th Peço
-      %th Ação
+      %th Preço
+      %th Concluido
     %tr
       %td= @users_order.code
       %td= @users_order.customer.name

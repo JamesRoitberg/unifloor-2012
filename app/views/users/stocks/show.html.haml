@@ -13,6 +13,4 @@
   %span
     = @stock.amount
   .edit_back
-    = link_to 'Editar', edit_users_stock_path([:users, @stock])
-    \|
-    = link_to 'Voltar', users_stocks_path
+    = link_to 'Voltar', users_stocks_path, :class => "back"

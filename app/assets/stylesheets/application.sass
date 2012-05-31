@@ -420,13 +420,12 @@ section.sign_in
             color: $main_color
           input
             &[type="submit"]
+              +button( $main_color, #FFF, 16px )
               width: 81px
               float: right
               margin-right: 108px
-              color: $main_color
-              border: $border_default
               cursor: pointer
-              float: right
+              border: none
         li.more_gap
           margin-bottom: 25px
   .right
@@ -457,14 +456,17 @@ section.representative
         label
           color: $main_color
           display: block
+      .actions
+        margin-top: 16px
+        float: left
         input
           &[type="submit"]
+            +button( $main_color, #FFF, 16px )
             width: 81px
             float: right
             margin-right: 108px
-            color: $main_color
-            border: $border_default
             cursor: pointer
+            border: none
       li.m_right
         margin: 0 50px 25px 0
       li.submit
@@ -509,9 +511,8 @@ section.associates
     a
       font-weight: bold
       display: block
-      &:hover
-        color: $main_color
-        text-decoration: underline
+    a.new
+      font-size: 15px
   a.back
     +button( $main_color, #FFF, 18px )
     float: right
@@ -557,7 +558,10 @@ section.new_costumers
   form
     input
       &[type="submit"]
-      float: left
+        +button( $main_color, #FFF, 16px )
+        width: 81px
+        float: left
+        border: none
 
 //categories
 section.categories
@@ -573,12 +577,12 @@ section.categories
       th
         color: $main_color
         font-size: 18px
-        padding-bottom: 10px
+        padding-bottom: 35px
         width: 200px
       td
         width: 200px
         font-size: 18px
-        padding-bottom: 5px
+        padding-bottom: 35px
         strong
           color: $main_color2
           font-size: 18px
@@ -588,6 +592,15 @@ section.categories
           &:hover
             color: $main_color
             text-decoration: underline
+        a.delete
+          +button( #FF0000, #FFF, 18px)
+          text-decoration: none
+        a.edit
+          +button( #3399ff, #FFF, 18px)
+          text-decoration: none
+        a.show   
+          +button( #776a5e, #FFF, 18px)
+          text-decoration: none   
   a.back
     +button( $main_color, #FFF, 18px )
     float: right
@@ -622,15 +635,16 @@ section.categories_new, .edit_categories
         width: 392px
         height: 37px
     .actions
+      margin-top: 10px
       input
         &[type="submit"]
+        +button( $main_color, #FFF, 16px )
         float: left
         width: 81px
-        color: $main_color
-        border: $border_default
         cursor: pointer
+        border: none
   >a.back
-    +button( $main_color, #FFF, 18px )
+    +button( $main_color, #FFF, 16px )
     float: right
     margin-bottom: 20px
 

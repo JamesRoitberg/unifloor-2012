@@ -4,6 +4,4 @@
   %span
     = @users_category.name
   .edit_back
-    = link_to 'Editar', edit_users_category_path(@users_category)
-    \|
-    = link_to 'Voltar', users_categories_path
+    = link_to 'Voltar', users_categories_path, :class => "back"

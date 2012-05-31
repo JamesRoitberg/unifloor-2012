@@ -14,8 +14,8 @@
         %td= stock.product.name
         %td= stock.status
         %td= stock.amount
-        %td= link_to 'Editar', edit_users_stock_path(stock)
-        %td= link_to 'Deletar', [:users, stock], :confirm => 'Você tem certeza?', :method => :delete
+        %td= link_to 'Editar', edit_users_stock_path(stock), :class => "edit"
+        %td= link_to 'Deletar', [:users, stock], :confirm => 'Você tem certeza?', :method => :delete, :class => "delete"
 
 
 

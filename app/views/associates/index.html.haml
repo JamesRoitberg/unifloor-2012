@@ -9,7 +9,7 @@
           %span= admin.email
           = link_to 'visualizar',  users_admin_path(admin)
           = link_to 'editar', edit_users_admin_path(admin)
-    = link_to 'Novo Admin', new_users_admin_path
+    = link_to 'Novo Admin', new_users_admin_path, :class => "new"
   .representative
     %strong Representantes
     - @representatives.each do |representative|
@@ -17,13 +17,13 @@
         %span= representative.email
         = link_to 'visualizar', users_representative_path(representative)
         = link_to 'editar', edit_users_representative_path(representative)
-    = link_to 'Novo Representante', new_users_representative_path
+    = link_to 'Novo Representante', new_users_representative_path, :class => "new"
   .emplooye
-    %strong Funcionarios
+    %strong Funcionários
     - @employees.each do |employee|
       %li
         %span= employee.email
         = link_to 'visualizar', users_employee_path(employee)
         = link_to 'editar', edit_users_employee_path(employee)
         
-    = link_to 'Novo Funcionario', new_users_employee_path
+    = link_to 'Novo Funcionário', new_users_employee_path, :class => "new"

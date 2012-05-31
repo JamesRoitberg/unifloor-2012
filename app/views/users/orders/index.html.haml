@@ -7,8 +7,8 @@
       %th Codigo
       %th Comprador
       %th Representante
-      %th Peço
-      %th Ação
+      %th Preço
+      %th Concluido
     - @users_orders.each do |users_order|
       %tr
         %td= users_order.code
@@ -16,8 +16,8 @@
         %td= users_order.user.name
         %td= users_order.price
         %td= users_order.action
-        %td= link_to 'Mostrar', [:users, users_order]
-        %td= link_to 'Editar', edit_users_order_path(users_order)
-        %td= link_to 'Deletar', [:users, users_order], :confirm => 'Você tem certeza?', :method => :delete
+        %td= link_to 'Mostrar', [:users, users_order], :class => "show"
+        %td= link_to 'Editar', edit_users_order_path(users_order), :class => "edit"
+        %td= link_to 'Deletar', [:users, users_order], :confirm => 'Você tem certeza?', :method => :delete, :class => "delete"
 
 
